@@ -4,3 +4,4 @@
 https://casmls.github.io/general/2016/09/25/normalizing-flows.html
 
 An open question, as described in the reference note: ``whether the proposed normalizing flows is a universal approximator of all the distributions when the number of layers go to infinity."
+A technical question: Do we still need to assume P(z_0) as a Gaussian distribution?
