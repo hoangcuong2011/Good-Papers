@@ -18,4 +18,5 @@ It is quite surprising (at least to me) that applying many steps of conditional 
 
 Question: how to train the model (maximize the likelhood of the data?) not sure I am missing something but they didn't describe that?
 This is no doubt a very cool work, and I was wondering how to apply the model to NLP applications as well!
+Finally, combining the model with VAE, GAN and autoagressive models could be a promising direction (see https://www.cs.toronto.edu/~duvenaud/courses/csc2541/slides/lec3-autoregressive.pdf)
 
