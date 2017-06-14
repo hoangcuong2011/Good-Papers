@@ -20,3 +20,4 @@ Question: how to train the model (maximize the likelhood of the data?) not sure 
 This is no doubt a very cool work, and I was wondering how to apply the model to NLP applications as well!
 Finally, combining the model with VAE, GAN and autoagressive models could be a promising direction (see https://www.cs.toronto.edu/~duvenaud/courses/csc2541/slides/lec3-autoregressive.pdf)
 
+- Wasserstein GAN: It is hard to write a short summary for such a great work! Some good references are here http://www.alexirpan.com/2017/02/22/wasserstein-gan.html and here https://vincentherrmann.github.io/blog/wasserstein/
