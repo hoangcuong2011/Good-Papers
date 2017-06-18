@@ -57,6 +57,9 @@ deconvolution and unpooling layers (see this http://www.cv-foundation.org/openac
 There are several things I don't quite get yet, mainly with my very limited background:
 First and most importantly, I wonder whether the final layers of the encoder have to be with the size of 1x1xdepth? I don't think it has to be that way (e.g. see https://arxiv.org/pdf/1511.00561.pdf), but I am not so sure why it is so common with the architecture (e.g. see http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Noh_Learning_Deconvolution_Network_ICCV_2015_paper.pdf)
 Second, I don't really have background of bilinear interpolation, and to me a decoder makes more sense than that technique. Why do the authors use it instead?
-Finally, I don't see why the encoder has to be a fully convolutional network. To me having several fully-connected layers at the end would be still fine (or could be even better abeit there are tons of more parameters).
+Third, I don't see why the encoder has to be a fully convolutional network. To me having several fully-connected layers at the end would be still fine (or could be even better abeit there are tons of more parameters).
+Finally, applying Dilated Convolutions seems to be a very good idea to help image segmentation  (see this https://arxiv.org/abs/1511.07122). I admit I don't get this point though, but I believe this is just a matter of time and I need to think a bit more about it.
+
+
 
 It is very pleased to know how people addressed this very hard problem with autoencoder-decoder. Nonetheless, I was wondering instead of using an encoder-decoder, are there other types of models that can produce such a heat map for each image?
