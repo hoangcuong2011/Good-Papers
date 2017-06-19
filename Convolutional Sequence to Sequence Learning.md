@@ -28,6 +28,6 @@ This however happens only on the encoder, but not on the decoder (I still cannot
 Multi-step attention is also interesting. The special thing here is that each decoder layer has a separate attention 
 mechanism. Equation 1 can look a bit complicated but if you take a look at the figure in the link above, everything should
 be much easier to follow. I however can imagine such a multi-hoe attention mechanism should be very hard to train, and it
-would be very surprising if we can train the model without good parameter initialization tricks.
+would be very surprising if we can train the model without good parameter initialization tricks mentioned in the paper
 
-Overall I really like the paper. Having a different yet strong model for translation is obviously great. I however have a bit concern whether it replaces sequence-to-sequence model or not. It is also not clear to me how function words are generated during the translation. But of course the model is quite basic (even though it is very technical), and there are lots of space we can improve.
+Overall I really like the paper. Having a different yet strong basic model for translation is great. I however have a bit concern whether it replaces sequence-to-sequence model or not. I believe the model would generate content words very well, but it is not clear to me how function words are generated during the translation. But of course the model is quite basic (even though it is very technical), and there are lots of space it can be improved.
