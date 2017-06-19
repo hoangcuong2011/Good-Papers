@@ -30,4 +30,4 @@ mechanism. Equation 1 can look a bit complicated but if you take a look at the f
 be much easier to follow. I however can imagine such a multi-hoe attention mechanism should be very hard to train, and it
 would be very surprising if we can train the model without good parameter initialization tricks.
 
-Overall I really like the paper. Having a different yet strong model for translation is obviously great. I however have a bit concern whether it replaces sequence-to-sequence model or not. It is also not clear to me how function words are generated during the translation. But of course the model is quite basic (even though it is very technical), and there is lots of space we can improve.
+Overall I really like the paper. Having a different yet strong model for translation is obviously great. I however have a bit concern whether it replaces sequence-to-sequence model or not. It is also not clear to me how function words are generated during the translation. But of course the model is quite basic (even though it is very technical), and there are lots of space we can improve.
