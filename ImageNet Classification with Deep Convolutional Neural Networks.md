@@ -1,0 +1,10 @@
+- ImageNet Classification with Deep Convolutional Neural Networks https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks:
+
+
+This paper ignites the trend of using Deep Learning and CNNs in Computer Vision, a must read for everybody I think. It does not have much novelty. But like Alphago, making old ideas (CNN) work well for such a very very very difficult task requires  expertise of Deep Learning (experience, technique) - the skills that those authors are second to none, if not the best. I had a bit confusing of the architecture, though. Specificially I was confused with the output of the first conv layer (55x55) when applied the layer to an input of size 224x224 w.r.t a filter of 11x11, with side 3 and pool size 2. The Stanford's course helps me clear http://cs231n.github.io/convolutional-networks/. Kudos to the lecturer, who is particularly well-known for his very best teaching skills. I also had a bit difficulty of understanding of the magic number of 4096 (the number of neurons in the fully-connected layer). You can find the link https://stackoverflow.com/questions/42733971/convolutional-layer-to-fully-connected-layer-in-cnn for an explanation.
+
+
+Alexnet is a milestone in Computer Vision. Yet there are many ways we can improve. Let me mention several things:
+1. Receptive fields applied in Alexnet are quite large in the begining (i.e. 11x11). It turns out that we should have a much smaller filter (e.g. 3x3). We should also stack multiple convolutional layers (instead of directly applying pooling layer after each convolutional layer). This leads to: (1) less parameters and (2) more nonlinearities in between. (see https://arxiv.org/abs/1409.1556 for a reference)
+2. We can stack convolutional layers in a more complicated way instead of using a typical sequential manner. (GoogleLe net https://arxiv.org/pdf/1409.4842.pdf)
+3. We can go around 100 layers with residual connections. This is a classic result from https://arxiv.org/abs/1512.03385. Amusingly, there is an interesting link between residual connections and boosting https://arxiv.org/abs/1706.04964
