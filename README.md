@@ -7,3 +7,4 @@
 - Wasserstein GAN: https://arxiv.org/abs/1701.07875 
 - ImageNet Classification with Deep Convolutional Neural Networks https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks:
 - Fully Convolutional Networks for Image Segmentation: https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf
+- Convolutional Sequence to Sequence Learning - https://arxiv.org/pdf/1705.03122.pdf
