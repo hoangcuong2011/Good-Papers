@@ -24,8 +24,7 @@ mechanism: intra-decoder attention. Again, the name sounds fancy, yet the idea i
 between two hidden states at decoding (see Equations 6 and 7). Besides proposed attention mechanisms, I really like the idea of using a switching function that decides whether to use token generation or the pointer, 
 but I am not sure the idea is proposed in the work, or it is already published somewhere.
 
-4. Training is also an interesting part. Teacher forcing algorithm is naturally the most straightforward method to train the model. 
-This could be natural because of exposure bias (see this very good paper https://arxiv.org/abs/1506.03099). More importantly,
+4. Training is also an interesting part. Teacher forcing algorithm is naturally the most straightforward method to train the model. However, this could be problematic because of exposure bias (see this very good paper https://arxiv.org/abs/1506.03099). More importantly,
 recall that the model does not have to produce an an exact word-by-word summary as in the ground-truth. It is therefore necessary to
 learn a maximize a specific discrete metric (e.g. ROUGHE) instead. You can imagine how reinforcement learning come into place now, but I think WGAN can be also a good option. I even expect it is easier to train the model with WGAN and it and may give more robust result. The work also proposes to use
 mixed training objective function, but it is just a hack, nothing new here.
