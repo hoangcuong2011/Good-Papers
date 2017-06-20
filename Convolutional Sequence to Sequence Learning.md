@@ -6,7 +6,7 @@ RNNs are the first citizens when it comes to sequence to sequence learning, but 
 First, reading thorough an input sentence into into a fixed-size vector before generating the output based on the vector
 seems problematic. First, we don't translate in that way. Second, both shorter and longer input sentences are encoded into
 a size-fixed  vector regardless their length. This does not sound right. Attention mechanism can help but I think we can do 
-better by using a more relevant NMT model in the first place. 
+better by using a more suitable NMT model in the first place. 
 
 Second, RNNs are sequential models, which means it is hard (or even impossible?) to parallel.
 
