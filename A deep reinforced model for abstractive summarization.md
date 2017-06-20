@@ -27,8 +27,7 @@ but I am not sure the idea is proposed in the work, or it is already published s
 4. Training is also an interesting part. Teacher forcing algorithm is naturally the most straightforward method to train the model. 
 This could be natural because of exposure bias (see this very good paper https://arxiv.org/abs/1506.03099). More importantly,
 recall that the model does not have to produce an an exact word-by-word summary as in the ground-truth. It is therefore necessary to
-learn a maximize a specific discrete metric (e.g. ROUGHE) instead. You can imagine how reinforcement learning come into place now, but
-WGAN can be also a good option, which I expect easier to train and may give more robust result. The work also proposes to use
+learn a maximize a specific discrete metric (e.g. ROUGHE) instead. You can imagine how reinforcement learning come into place now, but I think WGAN can be also a good option. I even expect it is easier to train the model with WGAN and it and may give more robust result. The work also proposes to use
 mixed training objective function, but it is just a hack, nothing new here.
 
 That is all. The experiments, however, are a bit weak: It does not convince how intra-temporal and intra-decoder attention help.
