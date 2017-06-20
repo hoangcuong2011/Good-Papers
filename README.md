@@ -8,3 +8,4 @@
 - ImageNet Classification with Deep Convolutional Neural Networks https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks:
 - Fully Convolutional Networks for Image Segmentation: https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf
 - Convolutional Sequence to Sequence Learning - https://arxiv.org/pdf/1705.03122.pdf
+- WaveNet: A Generative Model for Raw Audio - https://arxiv.org/abs/1609.03499
