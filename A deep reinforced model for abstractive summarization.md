@@ -18,7 +18,7 @@ The author proposes a new attention mechanism to address the problem.
 some solutions proposed in this work. Specificially, to prevent the model from using the same parts of the input on different decoding
 steps, the authors propose the so called intra-temporal attention. The name is fancy, yet the idea is quite straightforward: we need to
 normalize  the attention weights so that we penalize input tokens that have obtained high attention scores in the past decoding
-steps. Equation 3 is an ``implementation" of the idea, which I found a bit ad-hoc. But basically I know what they want to do.
+steps. Equation 3 is an ``implementation" of the idea, which I found a bit ad-hoc. But basically I get their idea.
 Having intra-tempora attention by itself is not enough to create good abstractive summaries, and the work proposes an additional 
 mechanism: intra-decoder attention. Again, the name sounds fancy, yet the idea is quite straightforward: we have an attention score
 between two hidden states at decoding (see Equations 6 and 7). Besides proposed attention mechanisms, I really like the idea of using a switching function that decides whether to use token generation or the pointer, 
