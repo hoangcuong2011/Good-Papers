@@ -9,3 +9,4 @@
 - Fully Convolutional Networks for Image Segmentation: https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf
 - Convolutional Sequence to Sequence Learning - https://arxiv.org/pdf/1705.03122.pdf
 - WaveNet: A Generative Model for Raw Audio - https://arxiv.org/abs/1609.03499
+- A deep reinforced model for abstractive summarization - https://arxiv.org/pdf/1705.04304.pdf
