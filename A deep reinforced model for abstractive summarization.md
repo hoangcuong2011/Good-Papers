@@ -32,8 +32,6 @@ WGAN can be also a good option, which I expect easier to train and may give more
 mixed training objective function, but it is just a hack, nothing new here.
 
 That is all. The experiments, however, are a bit weak: It does not convince how intra-temporal and intra-decoder attention help.
-The result is just that okay they, when putting together, are helpful. Also, training intra-attention seems does not help much, and
-sometime it even give worse results. There is also no experiment regarding to switching function, which I found a bit disappointed.
-It gives SOTA, okay, but it can be much stronger by doing more detailed analysis.
+The result is just that okay they, when putting together, are helpful. Also, training intra-attention with maximum likelihood seems does not help much, and sometime it even give worse results. There is also no experiment regarding to switching function, which I found a bit disappointed. It gives SOTA and that is awesome! But the work can be much stronger by doing more detailed analysis.
 
 Overall, this is a very nice paper. Yet it can be improved by many ways (having more experiments and better equations (?)). 
