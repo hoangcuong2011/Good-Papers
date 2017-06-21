@@ -54,19 +54,19 @@ The "sinusoidal" version is quite complicated, while giving similar performance 
 I feel this is particularly interesting, perhaps because not only it is nice(!), but also I am a fan of pointer networks, which address a similar problem).
 Unfortunately, the experiments don't elaborate this point in detail.
 
-That is all! Several tricks have been done, of course to make it work, but basically those are the main important take-home messages from the paper. Now we know a new architecture, where ``attention is all we need", gets a very strong result. (Note that FFNs can be interpreted as attention mechanism, as in the appendix).
+That is all! Several tricks have been done, of course to make it work, but basically those are the main important take-home messages from the paper. Now we know a new architecture, where "attention is all we need", gets a very strong result. (Note that FFNs can be interpreted as attention mechanism, as in the appendix).
 
 This is a very good paper. I enjoyed reading it a lot! But I think it is written a bit rush:
 
 - The paper is too technical and not easy to follow. 
-- The experiments are quite weak. Well, they give SOTA result (+2 bleu score) and that is awesome! But we already know
+- The experiments are quite weak. Well, the work gives SOTA result (+2 bleu score) and that is awesome! But we already know
 how amazing Google fellows are! The paper itself would be much stronger if the paper clarifies several important things, to name a few:
 1. Does having separate position-wise FFNs help? (comparing to ConvS2S).
 2. The paper got a significantly improvement over ConvS2S, but where does the improvement come from? It is not clear from the work.
-I believe the source of improvement should mainly come from of self-attention. This is the thing ConvS2S doesn't have.
+I believe the source of improvement should mainly come from self-attention mechanism. This is the thing ConvS2S doesn't have.
 Multi-head attention might be a reason, but it should not be a key factor here. 
 3. How sinusoidal helps translate long sentences.
-4. I am not really clear about the scaling factor in Equation 1. With my limited knowledge, I think it is new, but I don't see
-any experiment that elaborates that point...
+4. It is not really clear how the scaling factor (Equation 1) makes an impact. With my limited knowledge, I think the idea is new, but I don't see
+any experiment elaborating that point...
 
 
