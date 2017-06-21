@@ -43,17 +43,15 @@ the input on different decoding steps. I guess that explicitly having a position
 
 Besides self-attention mechanism, the paper also proposes multi-head attention. Instead of performing a single attention function
 with d-dimension, we performed *h* parallel attention functions with d/h-dimension. The output vectors are then concantenated (see Figure 2).
-I thought this idea is all about speed. But Table 3 in the experiment reveals that this helps improve the accuracy (h=1 and h=8), abeit not much.
+I thought this idea is all about improving speed. But Table 3 in the experiment reveals that this helps improve the accuracy (h=1 and h=8), abeit not much.
 Why is that? The author claims: "multi-head attention allows the model to jointly attend to information from different representation
 subspaces at different locations." This is great, but I think it should be elaborated more. As a side note, increasing
 h from 8 to 16 and 32 does not help. Hmm ....
 
-Position-wise FFNs are also an interesting topic to discuss. The network is simply two linera transformations with a ReLU activation in between,
-and there is nothing fancy here. The interesting thing is about how to add positional encodings to the input embeddings.
-A natural way is to embed the absolute position of input elements, as done in CONVS2S. The second way is to use ``sine and cosine functions of different frequencies".
-The ``sinusoidal" version is quite complicated, while giving similar performance to the absolute position version. But more importantly,
-it may allow the model to produce better translation on longer sentences at test time (longer than the sentences in the training data) (i.e. sinusoidal allows the model to extrapolate to longer sequence lengths).
-I feel this is particularly interesting, perhaps because not only it is nice, but also because I am a fan of pointer networks, which address a similar problem).
+Position-wise FFNs are also an interesting topic to discuss. The network is simply two linear transformations with a ReLU activation in between,
+and there is nothing fancy here. The interesting thing is regarding to adding positional encodings to the input embeddings. How we can we do that? A natural way is to embed the absolute position of input elements, as done in CONVS2S. The second way is to use "sine and cosine functions of different frequencies".
+The "sinusoidal" version is quite complicated, while giving similar performance to the absolute position version. But more importantly, it may allow the model to produce better translation on longer sentences at test time (longer than the sentences in the training data) (i.e. sinusoidal allows the model to extrapolate to longer sequence lengths).
+I feel this is particularly interesting, perhaps because not only it is nice(!), but also I am a fan of pointer networks, which address a similar problem).
 Unfortunately, the experiments don't elaborate this point in detail.
 
 That is all! Several tricks have been done, of course to make it work, but basically those are the main important take-home messages from the paper:
