@@ -21,7 +21,7 @@ Note that the encoder itself has multiple layers, so does the decoder.
 Different to previous work, each layer has two sub-layers: the first is an attention mechanism, 
 the second is position-wise fully connected 
 FFN. This reminds me of ConvS2S. In ConvS2S the attention model is equipped with ``a sense of
-order by embedding the position of input elements". But the way ConvS2S are built are different: The embedding of
+order by embedding the position of input elements". But the way ConvS2S is built is different: The embedding of
 position of input elements and the input elements themselves are combined to obtain input representations. Here we have two
 different type NNs for the two types. BTW in BYTENET we don't have position-wise FFN, but we have dilated convolutions. 
 
