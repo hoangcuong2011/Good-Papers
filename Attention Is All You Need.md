@@ -8,7 +8,7 @@ take a look at the following relevant work:
 - Intra-attention: https://arxiv.org/pdf/1705.04304.pdf
 
 In the last 2 years, we have seen how seq2seq models achieve SOTA performance in many NLP applications. Yet in the last couple of months,
-there is a trend of improving seq2seq. Most papers focus on two most important aspects.
+there is a trend of improving seq2seq in a significant way. Most papers focus on two most important aspects.
 
 First, seq2seq encodes an input into a fixed-size vector. We humans don't translate in that way. More importantly, 
 both short and long input sentences are encoded into a size-fixed vector regardless their length. This does not sound right.
