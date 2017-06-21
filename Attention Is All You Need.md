@@ -16,7 +16,7 @@ Second, seq2seq is slow. The computation is sequential and this must need to cha
 but from a research point of view, the first one is more interesting to work on.
 
 The most important contribution of the paper is to propose a new model architecture that helps
-us get rid of recurrence. Following a trend recently (eg. see BYTENET, WAVENET, CONVS2S), in their model, decoder is stacked directly on top of encoder.
+us get rid of recurrence. Following the recent trend (eg. see BYTENET, WAVENET, CONVS2S), in their model, decoder is stacked directly on top of encoder.
 Note that the encoder itself has multiple layers, so does the decoder. 
 Different to previous work, each layer has two sub-layers: the first is an attention mechanism, 
 the second is position-wise fully connected 
