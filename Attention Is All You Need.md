@@ -20,7 +20,7 @@ us get rid of recurrence. Following the recent trend (eg. see BYTENET, WAVENET, 
 Note that the encoder itself has multiple layers, so does the decoder. 
 Different to previous work, each layer has two sub-layers: the first is an attention mechanism, 
 the second is position-wise fully connected 
-FFN. This reminds me of ConvS2S. In ConvS2S the attention model is equipped with ``a sense of
+FFN. This reminds me of ConvS2S. In ConvS2S the attention model is equipped with "a sense of
 order by embedding the position of input elements". But the way ConvS2S is built is different: The embedding of
 position of input elements and the input elements themselves are combined to obtain input representations. Here we have two
 different type NNs for the two types of information respectively. BTW in BYTENET we don't have position-wise FFN, but we have dilated convolutions. 
@@ -34,7 +34,7 @@ one of the main problems with current seq2seq plus attention mechanism is that i
 (consisiting of repeated phrases). This is because the original attention (https://arxiv.org/abs/1409.0473) is not strong enough: 
 seq2seq could use the same parts of the input on different decoding steps, and it could also repeat generating target texts.
 They way people addressed the problem (at least from the related work https://arxiv.org/pdf/1705.04304.pdf)
-is to normalize attention weights (computed by the ``original" attention mechanism). In this way we explicitly penalize input
+is to normalize attention weights (computed by the "original" attention mechanism). In this way we explicitly penalize input
 tokens that have obtained high attention scores in the past decoding steps. 
 Unfortunately, I don't see how the attention mechanism proposed in the paper explicitly addresses the problem. 
 The only thing they mentioned is that they masked out (setting to -infinity) "all values in the input of the softmax which corresponds to illegal connections". 
@@ -54,8 +54,7 @@ The "sinusoidal" version is quite complicated, while giving similar performance 
 I feel this is particularly interesting, perhaps because not only it is nice(!), but also I am a fan of pointer networks, which address a similar problem).
 Unfortunately, the experiments don't elaborate this point in detail.
 
-That is all! Several tricks have been done, of course to make it work, but basically those are the main important take-home messages from the paper:
-new architecture, where attention is all we need to get a very strong result. (Note that FFNs can be interpreted as attention mechanism, as in the appendix).
+That is all! Several tricks have been done, of course to make it work, but basically those are the main important take-home messages from the paper. Now we know a new architecture, where ``attention is all we need", gets a very strong result. (Note that FFNs can be interpreted as attention mechanism, as in the appendix).
 
 This is a very good paper. I enjoyed reading it a lot! But I think it is written a bit rush:
 
