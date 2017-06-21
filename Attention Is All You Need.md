@@ -23,11 +23,13 @@ the second is position-wise fully connected
 FFN. This reminds me of ConvS2S. In ConvS2S the attention model is equipped with ``a sense of
 order by embedding the position of input elements". But the way ConvS2S is built is different: The embedding of
 position of input elements and the input elements themselves are combined to obtain input representations. Here we have two
-different type NNs for the two types. BTW in BYTENET we don't have position-wise FFN, but we have dilated convolutions. 
+different type NNs for the two types of information respectively. BTW in BYTENET we don't have position-wise FFN, but we have dilated convolutions. 
 
 Let us go into detail about attention. The attention mechanism proposed in the paper is pretty novel, in the sense that the attention is multi-head self-attention mechanism.
-It is a bit vague, however, to understand whether the improvements they have come from ``multi-head" part, or the ``self-attention"
-part. We will get into there later. Let me first explain what is self-attention. Basically,
+It is a bit vague, however, to understand whether the real merit comes from "multi-head" part, or the "self-attention"
+part. We will get into there later. 
+
+Let me first explain what is self-attention. Basically,
 one of the main problems with current seq2seq plus attention mechanism is that it often generates unatural output text 
 (consisiting of repeated phrases). This is because the original attention is not strong enough: 
 seq2seq could use the same parts of the input on different decoding steps, and it could also repeat generating target texts.
