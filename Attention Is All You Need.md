@@ -36,10 +36,10 @@ seq2seq could use the same parts of the input on different decoding steps, and i
 They way people addressed the problem (at least from the related work https://arxiv.org/pdf/1705.04304.pdf)
 is to normalize attention weights (computed by the ``original" attention mechanism). In this way we explicitly penalize input
 tokens that have obtained high attention scores in the past decoding steps. 
-Unfortunately, I don't see any point how the attention mechanism proposed in the paper explicitly addresses the problem. 
-The only thing they mentioned is that they masked out (setting to -infinity) all values in the input of the softmax which corresponds to illegal connections". 
+Unfortunately, I don't see how the attention mechanism proposed in the paper explicitly addresses the problem. 
+The only thing they mentioned is that they masked out (setting to -infinity) "all values in the input of the softmax which corresponds to illegal connections". 
 But I don't think that is strong enough, at least I still don't know how that fixes the problem of using the same parts of
-the input on different decoding steps. I guess by explicitly having a position-wise FFN would fix that problem.
+the input on different decoding steps. I guess that explicitly having a position-wise FFN automatically fixes that problem.
 
 Besides self-attention mechanism, the paper also proposes multi-head attention. Instead of performing a single attention function
 with d-dimension, we performed *h* parallel attention functions with d/h-dimension. The output vectors are then concantenated (see Figure 2).
