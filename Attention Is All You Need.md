@@ -31,7 +31,7 @@ part. We will get into there later.
 
 Let me first explain what is self-attention. Basically,
 one of the main problems with current seq2seq plus attention mechanism is that it often generates unatural output text 
-(consisiting of repeated phrases). This is because the original attention is not strong enough: 
+(consisiting of repeated phrases). This is because the original attention (https://arxiv.org/abs/1409.0473) is not strong enough: 
 seq2seq could use the same parts of the input on different decoding steps, and it could also repeat generating target texts.
 They way people addressed the problem (at least from the related work https://arxiv.org/pdf/1705.04304.pdf)
 is to normalize attention weights (computed by the ``original" attention mechanism). In this way we explicitly penalize input
