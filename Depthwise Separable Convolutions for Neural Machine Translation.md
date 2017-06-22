@@ -36,5 +36,5 @@ but with small-scale dilations (i.e. 1-2-4-8) as in the paper, the need for dila
 
 The authors also experiment with super-separable convs, but the improvement is rather marginal.
 
-Overall, this is a very nice paper to read. I think depthwise separable convolution will be widely used in future. 
+Overall, this is a very nice paper to read. I think depthwise separable convolution will be widely used in future.  This is particularly the case as ConvSeq is getting more and more attentions.
 
