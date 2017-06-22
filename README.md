@@ -11,5 +11,5 @@
 - WaveNet: A Generative Model for Raw Audio - https://arxiv.org/abs/1609.03499
 - A Deep Reinforced Model for Abstractive Summarization - https://arxiv.org/pdf/1705.04304.pdf
 - Attention Is All You Need - https://arxiv.org/abs/1706.03762
-
+- Depthwise Separable Convolutions for Neural Machine Translation - https://arxiv.org/abs/1706.03059
 
