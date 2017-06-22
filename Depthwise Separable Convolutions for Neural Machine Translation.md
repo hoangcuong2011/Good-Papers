@@ -3,12 +3,12 @@
 An interesting paper to read. This can be seen as an "Xception"-like (https://arxiv.org/abs/1610.02357) architecture 
 to NLP in general. Understanding Xception requires background of Google's Inception (https://arxiv.org/abs/1409.4842). 
 
-At a high-level, Xception is similar to an extreme verion of Inception modul where 1x1 conv is performed over all the input channels,
+At a high-level, Xception is similar to an extreme version of Inception modul where 1x1 conv is performed over all the input channels,
 and convolutions with larger receptive field (e.g. 3x3, or 5x5) performed *independently* over *each of output channels*.
 See this picture http://i.imgur.com/kylzfIQ.png). For convenience, let us refer 1x1 conv as pointwise conv, and a larger receptive
 field conv as depthwise conv.
 
-This extreme version may give a better performan than the "original" Inception-like
+This extreme version may give a better performance than the "original" Inception-like
 architecture: having multiple different "paths" of convolutions on *all the input channels". Each path 
 can be started with a 1x1 or pooling convolution, followed directly
 by a larger receptive field (e.g. 3x3, or 5x5) convolution (see this http://i.imgur.com/jwYhi8t.png).
@@ -24,7 +24,7 @@ The absence of any non-linearity gives faster convergence and better performance
 strange, isn't it?). But I still cannot figure why?
 
 Now back to the paper. The main contribution of the paper is to specifically apply Xception-like architecture to NMT. The system is
-fairly easy to follow once you know what Depthwise separable convolution is
+fairly easy to follow once you know what depthwise separable convolution is
 
 At a high-level,
 Table 2 gives us all take-home messages (Table 3 is nice, but it is simply to show off, I think.):
