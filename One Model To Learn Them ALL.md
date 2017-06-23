@@ -1,15 +1,14 @@
 - One Model To Learn Them All - https://arxiv.org/abs/1706.05137
 
 The work designs a single model that aims to learn from multiple tasks (Speech, Image, Parsing, Translation) simultanously. 
-Being ambitious enough, the title already stimulates readers by itself. What components should such a model include?
+Being ambitious enough, the title already stimulates readers to take a look by itself. What components should such a model include? Three basic gradients are here:
 
-1. Convolutional blocks with depthwise separable convolutions (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Depthwise%20Separable%20Convolutions%20for%20Neural%20Machine%20Translation.md)
-2. Attention blocks with multi-head dot-product attention mechanism (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Attention%20Is%20All%20You%20Need.md).
-There is no self-attention, though. The timing signals are also different to the ones proposed in the original work (Attention Is All You Need - https://arxiv.org/abs/1706.03762). I am not so sure
+1. Convolutional blocks with depthwise separable convolutions plus dilation (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Depthwise%20Separable%20Convolutions%20for%20Neural%20Machine%20Translation.md)
+2. Attention blocks with multi-head dot-product attention mechanism (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Attention%20Is%20All%20You%20Need.md). The timing signals are also different to the ones proposed in the original work (Attention Is All You Need - https://arxiv.org/abs/1706.03762). I am not so sure
 whether this has any benefit.
 3. Mixture of Experts blocks with sparsely-gated mixture-of-experts layers (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Outrageously%20Large%20Neural%20Networks:%20The%20Sparsely-Gated%20Mixture-of-Experts%20Layer.md)
 
-All those are the latest advancements in Deep Learning as of June 2017.
+All those are the latest advancements in Deep Learning as of June 2017. It was quite surprising that the work does not include self-attention.
 
 How to combine them together to have a framework that can work over all different tasks? I think the paper has three main important
 contributions:
