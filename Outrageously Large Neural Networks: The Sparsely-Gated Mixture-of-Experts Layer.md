@@ -1,4 +1,4 @@
-Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer - https://openreview.net/pdf?id=B1ckMDqlg
+- Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer - https://openreview.net/pdf?id=B1ckMDqlg
 
 A very interesting paper to read. Giving sufficiently large datasets, large-scale NNs with larger number of parameters NNs can provide
 better performance (see this greate video by Andrew Ng https://www.youtube.com/watch?v=LcfLo7YP8O4). It is, however, very
