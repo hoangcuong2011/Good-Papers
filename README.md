@@ -12,4 +12,5 @@
 - A Deep Reinforced Model for Abstractive Summarization - https://arxiv.org/pdf/1705.04304.pdf
 - Attention Is All You Need - https://arxiv.org/abs/1706.03762
 - Depthwise Separable Convolutions for Neural Machine Translation - https://arxiv.org/abs/1706.03059
+- Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer - https://openreview.net/pdf?id=B1ckMDqlg
 
