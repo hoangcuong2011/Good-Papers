@@ -31,8 +31,8 @@ As a side note it is not clear to me how they train the model jointly. I guess i
 
 While the work is definitely exciting, everything is still far behind what was advertised by the catchy title (I think many people have a problem with this title!) 
 
-More specifically, the result is significantly behind SOTA (Table 1). The authors commented they didn't tune well the model, and I believe all of us are eager to wait
-for a hopefully much better result from the authors in the coming time. 
+More specifically, the result is substantially behind SOTA (Table 1).  Admittedly when the baseline is very behind from the SOTA, it is quite hard to fully convince readers any statement.
 
-As a side note, I was wondering whethere it should be better to tune the model simultaneously over all the tasks or not. That would be
-great, but very hard to do and I am not sure it would be helpful (even harmful).
+The authors commented they didn't tune well the model, and I believe all of us are eager to wait for a much better result from the authors in near future.
+
+As a side note, I was wondering whethere the model should be tuned simultaneously over all the tasks or not. That would be great, but very hard to do and I am not sure it would be helpful (even harmful).
