@@ -8,12 +8,13 @@ Being ambitious enough, the title already stimulates readers to take a look by i
 whether this has any benefit.
 3. Mixture of Experts blocks with sparsely-gated mixture-of-experts layers (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Outrageously%20Large%20Neural%20Networks:%20The%20Sparsely-Gated%20Mixture-of-Experts%20Layer.md)
 
-All those are the latest advancements in Deep Learning as of June 2017. It was quite surprising that the work does not include self-attention.
+Those are some among the latest advancements in Deep Learning as of June 2017. It was quite surprising to me that the work did not include self-attention.
 
-How to combine them together to have a framework that can work over all different tasks? I think the paper has three main important
+How to combine them together to have a framework that can work for all different tasks? The paper has three main important
 contributions:
 
-It presents a MultiModel framework that consists of 3 parts. The enconder that processes inputs, the mixer part that mixes the encodeded inputs with previous generating outputs, and
+It presents a MultiModel framework that consists of 3 parts. The encoder that processes inputs, 
+the mixer part that mixes the encodeded inputs with previous generating outputs, and
 a decoder that processes the inputs and the mixture to generate the output.
 
 More specifically, the encoder consists of 6 repeated conv blocks, but with a mixture-of-experts layer in the middle. The mixer consists of an attention block and 2 conv blocks. The decoder
@@ -24,7 +25,7 @@ it may help.
 The second contribution of the paper is to show how to process different types of inputs. They have four different modality nets for
 text, images, audio and categorical data.
 
-The last main contribution of the paper is to show that training the model jointly on all tasks simulatenously sometimes can help (Table 2) (Table 4 also shows some other result, but not particularly interesting I think).
+The last main contribution of the paper is to show that training the model jointly on all tasks simulatenously sometimes can help (Table 2) (Table 4 also shows some other result, which is not particularly interesting I think).
 This is the case of speech and parsing, where the joint training model helps improve over the model trained separately just on a single task.
 As a side note it is not clear to me how they train the model jointly. I guess it is about "round-robin" strategy: the model is trained on the first task, and then the second task, the third task, and so on.
 
