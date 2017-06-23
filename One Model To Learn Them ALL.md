@@ -1,7 +1,7 @@
 - One Model To Learn Them All - https://arxiv.org/abs/1706.05137
 
 The work designs a single model that aims to learn from multiple tasks (Speech, Image, Parsing, Translation) simultanously. 
-Being ambitious enough, the title already stimulates readers to take a look by itself. What components should such a model include? Three basic gradients are here:
+Being ambitious enough, the title already stimulates readers to take a look by itself. What components should such a model include? Three basic ingredients are here:
 
 1. Convolutional blocks with depthwise separable convolutions plus dilation (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Depthwise%20Separable%20Convolutions%20for%20Neural%20Machine%20Translation.md)
 2. Attention blocks with multi-head dot-product attention mechanism (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Attention%20Is%20All%20You%20Need.md). The timing signals are also different to the ones proposed in the original work (Attention Is All You Need - https://arxiv.org/abs/1706.03762). I am not so sure
