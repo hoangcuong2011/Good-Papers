@@ -1,7 +1,7 @@
 - Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer - https://openreview.net/pdf?id=B1ckMDqlg
 
 A very interesting paper to read. Giving sufficiently large datasets, large-scale NNs with larger number of parameters NNs can provide
-better performance (see this greate video by Andrew Ng https://www.youtube.com/watch?v=LcfLo7YP8O4). It is, however, very
+better performance (see this great video by Andrew Ng https://www.youtube.com/watch?v=LcfLo7YP8O4). It is, however, very
 expensive to scale the size of neural nets, even with Google.
 
 A simple and elegant idea to address the problem is to apply A Mixture of Experts (MoE). 
