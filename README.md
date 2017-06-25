@@ -1,5 +1,7 @@
 # Some good papers I like
 
+*Papers with detailed notes*
+
 - Variational Inference with Normalizing Flows: https://arxiv.org/abs/1505.05770
 - MADE: Masked Autoencoder for Distribution Estimation: https://arxiv.org/abs/1502.03509
 - Improving Variational Inference with Inverse Autoregressive Flow: https://arxiv.org/abs/1606.04934
@@ -14,6 +16,10 @@
 - Depthwise Separable Convolutions for Neural Machine Translation - https://arxiv.org/abs/1706.03059
 - Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer - https://openreview.net/pdf?id=B1ckMDqlg
 - One Model To Learn Them All - https://arxiv.org/abs/1706.05137
+
+
+*Papers with quick notes* 
+
 - On Multiplicative Integration with Recurrent Neural Networks - https://arxiv.org/abs/1606.06630 - Take-home message: we can modify the additive integration with multiplicative integration in RNN. The goal is to make transition (i.e. gradient state over state) tighter to inputs.
 - Importance weighted autoencoders -https://arxiv.org/abs/1509.00519 - Take-home message: A nice paper, showing that training with weighted sample always better (a clear explanatio from the paper). Also, one can tighten the bound simply by drawing more samples in the Monte Carlo objective.
 - Adversarial Autoencoders: https://arxiv.org/abs/1511.05644 - Take-home message: Instead of using KL divergence as in Variational autoencoders, we should rather optimize JS divergence. This makes sense as JS could better than KL in inference.
