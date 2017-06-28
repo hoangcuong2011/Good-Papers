@@ -20,8 +20,8 @@
 
 
 *Papers with quick notes* 
-
-- On Multiplicative Integration with Recurrent Neural Networks - https://arxiv.org/abs/1606.06630 - Take-home message: we can modify the additive integration with multiplicative integration in RNN. The goal is to make transition (i.e. gradient state over state) tighter to inputs.
+- *Bagging by Design (on the Suboptimality of Bagging)* - https://www.aaai.org/ocs/index.php/AAAI/AAAI14/paper/view/8406 - Take-home message: a nice study, proposing a provably optimal subsampling *design-bagging* method. The proposed one outperforms the original bagging method convincingly (both theoretical and experimental aspects).
+- *On Multiplicative Integration with Recurrent Neural Networks* - https://arxiv.org/abs/1606.06630 - Take-home message: we can modify the additive integration with multiplicative integration in RNN. The goal is to make transition (i.e. gradient state over state) tighter to inputs.
 - Importance weighted autoencoders -https://arxiv.org/abs/1509.00519 - Take-home message: A nice paper, showing that training with weighted sample always better (a clear explanatio from the paper). Also, one can tighten the bound simply by drawing more samples in the Monte Carlo objective.
 - Adversarial Autoencoders: https://arxiv.org/abs/1511.05644 - Take-home message: Instead of using KL divergence as in Variational autoencoders, we should rather optimize JS divergence. This makes sense as JS could better than KL in inference.
 - On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima - https://arxiv.org/abs/1609.04836 Take-home message: Very good paper, explaing why SGD with small-batch size is so useful: an optimizer should aim for flat minima (maxima) instead of sharp minima(maxima). Small batch size helps achieve this because there is lots of noisy gradients in training.
