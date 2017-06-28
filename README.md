@@ -16,6 +16,7 @@
 - Depthwise Separable Convolutions for Neural Machine Translation - https://arxiv.org/abs/1706.03059
 - Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer - https://openreview.net/pdf?id=B1ckMDqlg
 - One Model To Learn Them All - https://arxiv.org/abs/1706.05137
+- Incorporating Copying Mechanism in Sequence-to-Sequence Learning - http://www.aclweb.org/anthology/P16-1154
 
 
 *Papers with quick notes* 
