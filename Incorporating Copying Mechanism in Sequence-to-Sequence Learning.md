@@ -1,34 +1,32 @@
 - Incorporating Copying Mechanism in Sequence-to-Sequence Learning - http://www.aclweb.org/anthology/P16-1154
 
-Recently, chatbot is an active research topic. Walking through chatbot papers, I think this work is one of the most 
-interesting ones. It also has potential applications to other NLP tasks such as Machine Translation, Abstract Summarization. 
+Chatbot is an active research topic recently. Walking through chatbot papers, I think this paper is one of the most 
+interesting work for this topic. The work can also be applied to other NLP tasks such as Machine Translation, Abstract Summarization. 
 
 The general chatbot framework is all about a sequence-to-sequence model (seq2seq). This is straightforward, easier
-to implement. But of course there are quite lots of space for improvements. One of 
-the problems seq2seq has is about copying. In conversation, we normally have some repeated text as an example below
+to implement. But of course there are quite lots of space for an improvement. One of 
+the them is about copying. In conversation, we normally have some repeated text as an example below
 
-Helo, my name is chatbot
+Helo, my name is *chatbot*
 
 
-Nice to meet you, chatbot.
+Nice to meet you, *chatbot*.
 
-In general, seq2seq aparently does not handle repeated text well. This is actually not surprising, reminding me
+In general, seq2seq aparently does not handle repeated text well. This is actually not surprising, reminding me of
 a very cool work of Learning to Execute https://arxiv.org/abs/1410.4615. Basically, the idea is to write simple code, 
 and then ask seq2seq to execute the code (a top toy problem but very very interesting one). 
-One interesting thing we learnt from the paper is that seq2seq in general is not good enough to perform a copy command, 
-for example:
+One interesting thing we learnt from the paper is that seq2seq  is not good enough to execute a copy command, in general. For example:
 
 command: print(123456789) 
 
 output: 123565756 (I made up the number, but you get the idea). 
 
-Also, the longer the input, the harder LSTM can produce accurately. 
+Also, as the input is longer, the seq2seq can produce less accurate. 
 
 How to address that problem? In general, having an external memory (https://arxiv.org/abs/1410.3916) is a very nice solution, I think.
-But it is just for learning to execute. Conversation is much harder problem, at least with the current basic sample codes we want a seq2seq to
-execute. 
+But it is just for learning to execute. Conversation is much harder problem, at least with current basic sample codes we want a seq2seq to execute. 
 
-The paper proposes new model (COPYNET) to address the problem. 
+The paper proposes a new model (COPYNET) to address the problem. 
 The model is basically the same as seq2seq, but there are several important differences:
 
 1. The generation of target words is more refined: A word can be generated according to two different modes: 
