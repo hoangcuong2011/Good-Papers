@@ -8,6 +8,8 @@ to implement. But of course there are quite lots of space for improvements. One 
 the problems seq2seq has is about copying. In conversation, we normally have some repeated text as an example below
 
 Helo, my name is chatbot
+
+
 Nice to meet you, chatbot.
 
 In general, seq2seq aparently does not handle repeated text well. This is actually not surprising, reminding me
@@ -15,7 +17,10 @@ a very cool work of Learning to Execute https://arxiv.org/abs/1410.4615. Basical
 and then ask seq2seq to execute the code (a top toy problem but very very interesting one). 
 One interesting thing we learnt from the paper is that seq2seq in general is not good enough to perform a copy command, 
 for example:
-print(123456789) -> output: 123565756 (I made up the number, but you get the idea). 
+
+command: print(123456789) 
+
+output: 123565756 (I made up the number, but you get the idea). 
 
 Also, the longer the input, the harder LSTM can produce accurately. 
 
