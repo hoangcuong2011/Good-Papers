@@ -18,6 +18,6 @@ Experiments validate the soundness of the approach. Using the two-million unlabe
 In general, I like the paper. It is simple and nice to read. Exploiting the natural synchronization between vision and sound seems a neat idea, but I am not sure whether this study is the first one that proposes the idea.
 
 The paper itself raises a question to me, however. That is, I am not so sure whether we should have a shared representations
-between both videos and waveforms, or we should have separate representations that we should try to (indirectly) align them, somehow, as shown in the paper.
+between both videos and waveforms, or separate representations that are (indirectly) aligned, somehow, as in the paper.
 
 
