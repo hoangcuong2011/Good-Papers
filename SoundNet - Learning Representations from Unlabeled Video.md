@@ -19,5 +19,5 @@ In general, I like the paper. It is simple and nice to read. Exploiting the natu
 
 The paper itself raises a question to me, however. That is, I am not so sure whether we should have a shared representations
 between both videos and waveforms, or separate representations that are (indirectly) aligned, somehow, as in the paper.
-
+As a side note, I don't think having the subnetwork that processes videos is necessary. We only need it when Places365 gives us a *hard* category of sences and objectives given a video). If Places365 gives us a probabilitistic distribution of categories of sences and objectives, then the subnetwork is totally redundent!
 
