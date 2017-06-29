@@ -22,6 +22,10 @@
 
 
 *Papers with quick notes* 
+
+- *See, hear, and read: deep aligned representations* - https://arxiv.org/abs/1706.00932: The paper proposes a nice *Cross-Modal Networks* to approach the challenge of learning discriminative representations shared across modalities. Given inputs as different types (image, sound, text), the model produces a *common representation* shared across modalilities. The
+common representation can bring huge benefits. For instance, let us assume we have pairs of images and sound (from videos).
+Let us also assume we have pairs of images and text (from caption datasets). Such a common representation can map between sound and text using images as a bridge (pretty cool!). It is however unclear from the paper how the cross-model networks are designed/implemented. Lots of technical details are missing, and it is very hard to walk through the paper.
 - *Bagging by Design (on the Suboptimality of Bagging)* - https://www.aaai.org/ocs/index.php/AAAI/AAAI14/paper/view/8406 - Take-home message: a nice study, proposing a provably optimal subsampling *design-bagging* method. The proposed one outperforms the original bagging method convincingly (both theoretical and experimental aspects).
 - *On Multiplicative Integration with Recurrent Neural Networks* - https://arxiv.org/abs/1606.06630 - Take-home message: we can modify the additive integration with multiplicative integration in RNN. The goal is to make transition (i.e. gradient state over state) tighter to inputs.
 - *Importance weighted autoencoders* - https://arxiv.org/abs/1509.00519 - Take-home message: A nice paper, showing that training with weighted sample always better (a clear explanatio from the paper). Also, one can tighten the bound simply by drawing more samples in the Monte Carlo objective.
