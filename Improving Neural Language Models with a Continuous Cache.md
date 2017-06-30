@@ -22,7 +22,7 @@ Results are convincing.
 While the model is nice, I believe we can improve the model by having an additional weight matrix W as follows
 
 P_cache(word |hidden representations h_1, ..., h_{t}) 
-proportional to sum_{i=1)^{t-1} delta(word, previous word i)exp(\theta * h_t *W* h_k)
+proportional to sum_{i=1)^{t-1} delta(word, previous word i)exp(\theta * h_t * *W* * h_k)
 
 The weight can be learned by using backprop. In this case training the model can be harder, but I expect we can have
 better performance.
