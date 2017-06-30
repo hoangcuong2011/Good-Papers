@@ -13,8 +13,7 @@ hidden state, and the stored hidden representations of previous words:
 P_cache(word |hidden representations h_1, ..., h_{t}) 
 proportional to sum_{i=1)^{t-1} delta(word, previous word i)exp(\theta * h_t * h_k)
 
-The observation of using h_k as key and h_t as query vector is a nice one. I also like the fact that the model uses dot product to
-learn similarity between two vectors, abeit I am sure the idea is already proposed elsewhere for decades.
+The observation of using h_k as key and h_t as query vector is a nice one. I also like the fact that the model uses dot product to learn similarity between two vectors, abeit I am sure the idea is already proposed elsewhere for decades. Note that theta is a hyperparameter, tuned on a validation set.
 
 In experiments, the cache size is small (can be up to 10K), which is similar to the normal cache size developed with traditional language models.
 Results are convincing.
