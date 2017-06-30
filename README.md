@@ -18,6 +18,8 @@
 - *One Model To Learn Them All*: https://arxiv.org/abs/1706.05137
 - *Incorporating Copying Mechanism in Sequence-to-Sequence Learning*: http://www.aclweb.org/anthology/P16-1154
 - *SoundNet - Learning Representations from Unlabeled Video*: https://arxiv.org/abs/1610.09001
+- *Improving Neural Language Models with a Continuous Cache*: https://openreview.net/pdf?id=B184E5qee
+
 
 
 
