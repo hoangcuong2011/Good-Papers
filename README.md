@@ -20,6 +20,8 @@
 - *SoundNet - Learning Representations from Unlabeled Video*: https://arxiv.org/abs/1610.09001
 - *Improving Neural Language Models with a Continuous Cache*: https://openreview.net/pdf?id=B184E5qee
 - *A Clockwork RNN*: http://proceedings.mlr.press/v32/koutnik14.pdf
+- *Variable Computation in Recurrent Neural Networks*: https://arxiv.org/abs/1611.06188
+
 
 
 
