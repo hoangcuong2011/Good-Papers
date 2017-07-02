@@ -3,7 +3,11 @@
 The paper addresses an interesting problem that I admit I never thought about it before. 
 
 Consider sequential data such as audio. There are time periods where we don't hear anything (i.e. silence). Another similar case are video. There are time periods where
-we don't see much changes (e.g. you might see this very often in Indian movies.haha). 
+we don't see much changes (e.g. you might see this very often in Indian movies.haha). Finally, this can also happen in text
+prediction. For instance, given a sequence of text "in", there are lots of options that give a meaningful word: inbox, inherence, inhabitant, etc. Meanwhile, given a sequence of text "goog", it is almost obvious that a meaningful word
+would contain "google".
+
+
 It is natural to come up a question: how to create a model that do much less computation in those cases? 
 
 Recall that in RNN, the bulk of computation comes from matrix multiplications:
