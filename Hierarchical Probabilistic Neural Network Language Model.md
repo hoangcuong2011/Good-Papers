@@ -32,3 +32,7 @@ The current paper pushes the idea to the limit. Let us assume we have a hierarch
 P(w|history) = p(w|history, C_1(w))p(C_1(w)|history) = p(w, C_2(C_1(w))|history, C_1(w))p(C_1(w),C_2(C_1(w))|history)
 
 = p(w| history, C_1(w), C_2(C_1(w))) p(C_2(C_1(w))|history, C_1(w)) p(C_2(C_1(w))|history,C_1(w))p(C_2(C_1(w))|history)
+
+
+
+------------------------ not done yet, to be continued later --------------------
