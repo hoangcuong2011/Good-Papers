@@ -1,7 +1,7 @@
 # Some good papers I like
 
 *Papers with detailed notes*
-
+- Hierarchical Probabilistic Neural Network Language Model http://www.iro.umontreal.ca/~lisa/pointeurs/hierarchical-nnlm-aistats05.pdf
 - *Variational Inference with Normalizing Flows*: https://arxiv.org/abs/1505.05770
 - *MADE: Masked Autoencoder for Distribution Estimation*: https://arxiv.org/abs/1502.03509
 - *Improving Variational Inference with Inverse Autoregressive Flow*: https://arxiv.org/abs/1606.04934
