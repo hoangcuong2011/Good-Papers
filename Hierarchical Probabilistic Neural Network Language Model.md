@@ -1,7 +1,6 @@
 - Hierarchical Probabilistic Neural Network Language Model http://www.iro.umontreal.ca/~lisa/pointeurs/hierarchical-nnlm-aistats05.pdf
 
-This is a classic paper, showing how to speed up NN Language Model. The technique is not SOTA by any means as of 2017, but
-the technique itself is valuable to learn, I believe.
+This is a classic paper, showing how to speed up NN Language Model. The technique is not SOTA by any means as of 2017, it is very interesting to study.
 
 Recall that for NN LM we need to compute an extremely expensive softmax function:
 exp(g(w_t,history)/all_word exp(g(w',history)
@@ -28,3 +27,9 @@ could be better for choices of word classes that "make sense".
 
 
 
+The current paper pushes the idea to the limit. Let us assume we have a hierarchical tree where at the bottom, each word belongs to a specific class. Going up higher, each class belongs to a higher-level class. An illustration can be found here https://i.stack.imgur.com/OPq7K.gif
+
+P(w|history) = p(w|history, C_1(w))p(C_1(w)|history) 
+= p(w, C_2(C_1(w))|history, C_1(w))p(C_1(w),C_2(C_1(w))|history)
+= p(w| history, C_1(w), C_2(C_1(w))) p(C_2(C_1(w))|history, C_1(w)) 
+p(C_2(C_1(w))|history,C_1(w))p(C_2(C_1(w))|history)
