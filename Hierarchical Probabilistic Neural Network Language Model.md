@@ -19,7 +19,7 @@ P(w''|history, C(w)) propto P(history, C(w)|w'')p(w'') = P(history|w'', C(w))p(C
 since p(C(w)|w'') = 0, P(history, C(w)|w'')p(w'') would be 0 and P(w''|history, C(w)) would be 0.
 
 As a result, we don't need to compute P(w''|history, C(w)) for all words w'' that do not belong to C(w). Let us assume we have sqrt(V) classes,
-where each class contains sqrt(V) words, where V is the size of the vocab. The model can drastically reduce the computation from O(V) to (O|sqrt(V))|).
+where each class contains sqrt(V) words, where V is the size of the vocab. The model can drastically reduce the computation from O(V) to (O|sqrt(V)|).
 
 Of course there is no free lunch. Although any C(.) would yield correct probabilities, generalization
 could be better for choices of word classes that "make sense".
@@ -27,9 +27,8 @@ could be better for choices of word classes that "make sense".
 
 
 
-The current paper pushes the idea to the limit. Let us assume we have a hierarchical tree where at the bottom, each word belongs to a specific class. Going up higher, each class belongs to a higher-level class. An illustration can be found here https://i.stack.imgur.com/OPq7K.gif
+The current paper pushes the idea to the limit. Let us assume we have a hierarchical tree where at the bottom, each word belongs to a specific class. Going up higher, each class belongs to a higher-level class. An illustration can be found here https://i.stack.imgur.com/OPq7K.gif. For convenience, let us simply assume the depth of the tree is just only 2. Let us use C_1(.) to denote the class function at leaf, and C_2(.) to denote the class function  at the top level. We can reduce the computation from O(|sqrt(V)) to even lower.
 
-P(w|history) = p(w|history, C_1(w))p(C_1(w)|history) 
-= p(w, C_2(C_1(w))|history, C_1(w))p(C_1(w),C_2(C_1(w))|history)
-= p(w| history, C_1(w), C_2(C_1(w))) p(C_2(C_1(w))|history, C_1(w)) 
-p(C_2(C_1(w))|history,C_1(w))p(C_2(C_1(w))|history)
+P(w|history) = p(w|history, C_1(w))p(C_1(w)|history) = p(w, C_2(C_1(w))|history, C_1(w))p(C_1(w),C_2(C_1(w))|history)
+
+= p(w| history, C_1(w), C_2(C_1(w))) p(C_2(C_1(w))|history, C_1(w)) p(C_2(C_1(w))|history,C_1(w))p(C_2(C_1(w))|history)
