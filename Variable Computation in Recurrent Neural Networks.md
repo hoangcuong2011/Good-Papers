@@ -8,7 +8,7 @@ prediction. For instance, given a sequence of text "in", there are lots of optio
 would contain "google".
 
 
-It is natural to come up a question: how to create a model that do much less computation in those cases? 
+It is natural to come up a question: how to create a model that does much less computation in those cases? 
 
 Recall that in RNN, the bulk of computation comes from matrix multiplications:
 h_t = tanh(U h_t{-1} + V x_t) (1)
