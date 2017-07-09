@@ -6,7 +6,8 @@ Recall that for NN LM we need to compute an extremely expensive softmax function
 exp(g(w_t,history))/all_word exp(g(w',history))
 
 The paper shows how to approximate the softmax function while speeding up the computation. How? First recall that once we have a deterministic mapping between each point x and a class C(x), we can compute P(w|history) in a different way as follows:
-P(w|history) = p(w|history, C(w))p(C(w)|history).
+
+P(w|history) = p(w|history, C(w)) p(C(w)|history).
 
 The hierarchical decomposition is proposed by Goodman in 2001 (https://arxiv.org/abs/cs/0108006). The nice thing about the composition is that it is much faster to compute. 
 One one hand, p(C(w)|history) is much faster to compute.
@@ -26,11 +27,29 @@ could be better for choices of word classes that "make sense". I however didn't 
 
 
 
-The current paper pushes the idea to the limit. Let us assume we have a hierarchical tree where at the bottom, each word belongs to a specific class. Going up higher, each class belongs to a higher-level class. An illustration can be found here https://i.stack.imgur.com/OPq7K.gif. For convenience, let us simply assume the depth of the tree is just only 2. Let us use C_1(.) to denote the class function at leaf, and C_2(.) to denote the class function  at the top level. We can reduce the computation from O(|sqrt(V)) to even lower.
+The current paper pushes the idea to the limit. 
+
+Let us assume we have a hierarchical tree where at the bottom, each word belongs to a specific class. Going up higher, each class belongs to a higher-level class. An illustration can be found here https://i.stack.imgur.com/OPq7K.gif. For convenience, let us simply assume the depth of the tree is just only 2. Let us use C_1(.) to denote the class function at leaf, and C_2(.) to denote the class function  at the top level. We can reduce the computation from O(|sqrt(V)) to even lower.
 
 P(w|history) = p(w|history, C_1(w))p(C_1(w)|history) = p(w, C_2(C_1(w))|history, C_1(w))p(C_1(w),C_2(C_1(w))|history)
 
 = p(w| history, C_1(w), C_2(C_1(w))) p(C_2(C_1(w))|history, C_1(w)) p(C_2(C_1(w))|history,C_1(w))p(C_2(C_1(w))|history)
+
+While this way is useful, it is not that neat! The way the authors push the idea to the limit is pretty smart: Let's us assume we can represent a word as a binary vector with size m, i.e. there is a mapping
+between w and a unique binary vector size m: [b_1(w), b_2(w), ..., b_m(w)]. In this way we have:
+
+P(w|history) = P(b_1(w), b_2(w), ..., b_m(w)|history) = prod_{j=1}^{m} P(b_j(w)|b_1(w), ..., b_{j-1}(w), history)
+
+How much faster can we speed up our computation in this case? I think this question is not that trivial to answer. First,
+notice that the most expensive computation cost for the above formula is about computing 
+
+P(b_1(w)|history)
+
+How many elements we need to normalize?
+
+
+Let us assume we have a balanced binary tree, and each word can be interpreted as a series of binary stochastic decisions.
+
 
 
 
