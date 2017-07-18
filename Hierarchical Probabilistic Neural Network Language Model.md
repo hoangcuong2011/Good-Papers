@@ -27,28 +27,22 @@ could be better for choices of word classes that "make sense". I however didn't 
 
 
 
-The current paper pushes the idea to the limit. 
+The current paper pushes the idea to the limit. How?
 
-Let us assume we have a hierarchical tree where at the bottom, each word belongs to a specific class. Going up higher, each class belongs to a higher-level class. An illustration can be found here https://i.stack.imgur.com/OPq7K.gif. For convenience, let us simply assume the depth of the tree is just only 2. Let us use C_1(.) to denote the class function at leaf, and C_2(.) to denote the class function  at the top level. We can reduce the computation from O(|sqrt(V)) to even lower.
+I thought this is the way the authors did: Let us assume we have a hierarchical tree where at the bottom, each word belongs to a specific class. Going up higher, each class belongs to a higher-level class. An illustration can be found here https://i.stack.imgur.com/OPq7K.gif. For convenience, let us simply assume the depth of the tree is just only 2. Let us use C_1(.) to denote the class function at leaf, and C_2(.) to denote the class function  at the top level. We can reduce the computation from O(|sqrt(V)|) to even lower.
 
 P(w|history) = p(w|history, C_1(w))p(C_1(w)|history) = p(w, C_2(C_1(w))|history, C_1(w))p(C_1(w),C_2(C_1(w))|history)
 
 = p(w| history, C_1(w), C_2(C_1(w))) p(C_2(C_1(w))|history, C_1(w)) p(C_2(C_1(w))|history,C_1(w))p(C_2(C_1(w))|history)
 
-While this way is useful, it is not that neat! The way the authors push the idea to the limit is pretty smart: Let's us assume we can represent a word as a binary vector with size m, i.e. there is a mapping
+While this way of decomposition is useful, it is very difficult to construct such a tree! 
+
+Here is the way the authors actually did, which is pretty smart. First, let us assume we can represent a word as a binary vector with size m, i.e. there is a mapping
 between w and a unique binary vector size m: [b_1(w), b_2(w), ..., b_m(w)]. In this way we have:
 
 P(w|history) = P(b_1(w), b_2(w), ..., b_m(w)|history) = prod_{j=1}^{m} P(b_j(w)|b_1(w), ..., b_{j-1}(w), history)
 
-How much faster can we speed up our computation in this case? I think this question is not that trivial to answer. First,
-notice that the most expensive computation cost for the above formula is about computing 
-
-P(b_1(w)|history)
-
-How many elements we need to normalize?
-
-
-Let us assume we have a balanced binary tree, and each word can be interpreted as a series of binary stochastic decisions.
+In other words, each word enjoys a unique path from the root to itself. Let us assume such a tree as a balanced tree. The length of the path is the same as the heigh of the tree on average. In this way, the final probability (P(w|history)) is the continuous multiplication of probabilities regarding to steps in the path we travel from the root to leaf. Apparently, the time complexity decreases from O(|V|) to O(log(|V|)). But how expensive is it to compute the probability regarding to a specific step? This is the point I am not so clear!
 
 
 
