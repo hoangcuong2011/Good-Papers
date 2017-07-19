@@ -46,4 +46,6 @@ In other words, each word enjoys a unique path from the root to itself. Let us a
 
 But how expensive is it to compute the probability regarding to a specific step? For instance, let us assume we need to compute probabilities regarding to the very first step:
 P(0|history) and P(1|history) (Note that P(0|history) + P(1|history) = 1).
-If we think of the work of Goodman, we still need to count all the words in the vocab, and see which one starts with 0 or 1 to compute P(0|history) and P(1|history). Therefore I was very confusing that we do not speed up the computation at all. Actually I was wrong - there is nothing related to the work of Goodman at this point. That is, P(0|history) is modeled as a simple linear/non-linear function, e.g.: sigm(bias+ one hot vector in vocab * transformation of history)
+If we think of the work of Goodman, we still need to count all the words in the vocab, and see which one starts with 0 or 1 to compute P(0|history) and P(1|history). Therefore I was very confusing that we do not speed up the computation at all. Actually I was wrong - there is nothing related to the work of Goodman at this point. That is, P(0|history) is the output of a network in which the output is a simple non-linear function, e.g.: 
+
+sigmoid(bias+ vector representation b_(w) * hidden layer)
