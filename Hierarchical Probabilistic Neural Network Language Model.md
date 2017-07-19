@@ -49,3 +49,6 @@ P(0|history) and P(1|history) (Note that P(0|history) + P(1|history) = 1).
 If we think of the work of Goodman, we still need to count all the words in the vocab, and see which one starts with 0 or 1 to compute P(0|history) and P(1|history). Therefore I was very confusing that we do not speed up the computation at all. Actually I was wrong - there is nothing related to the work of Goodman at this point. That is, P(0|history) is the output of a network and the output is a simple non-linear function. One possible way can be: 
 
 sigmoid(bias of Node + U*representation of Node + W * hidden layer)
+
+
+Finally, how to build such a tree? In this work the authors rely on Wordnet. Experiments show that the method gains a remarkable speed up at more than 250 times, while achiving a competitive performance to the original model.
