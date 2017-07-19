@@ -52,3 +52,5 @@ sigmoid(bias of Node + U*representation of Node + W * hidden layer)
 
 
 Finally, how to build such a tree? In this work the authors rely on Wordnet. Experiments show that the method gains a remarkable speed up at more than 250 times, while achiving a competitive performance to the original model.
+
+There is no doubt that the method is classic. Yet the paper can be more solid by having experiment with the model with random clusterings and other unsupervised clustering methods. The way the authors did experiments is using prior knowledge (Wordnet), which makes the comparison is unfair.
