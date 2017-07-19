@@ -35,16 +35,15 @@ P(w|history) = p(w|history, C_1(w))p(C_1(w)|history) = p(w, C_2(C_1(w))|history,
 
 = p(w| history, C_1(w), C_2(C_1(w))) p(C_2(C_1(w))|history, C_1(w)) p(C_2(C_1(w))|history,C_1(w))p(C_2(C_1(w))|history)
 
-While this way of decomposition is useful, it is very difficult to construct such a tree! 
+While this way of decomposition is useful, it is very difficult to construct such a tree! Is it the way the authors did? Actually they did it in a totally different way!
 
-Here is the way the authors actually did, which is pretty smart. First, let us assume we can represent a word as a binary vector with size m, i.e. there is a mapping
+First, let us assume we can represent a word as a binary vector with size m, i.e. there is a mapping
 between w and a unique binary vector size m: [b_1(w), b_2(w), ..., b_m(w)]. In this way we have:
 
 P(w|history) = P(b_1(w), b_2(w), ..., b_m(w)|history) = prod_{j=1}^{m} P(b_j(w)|b_1(w), ..., b_{j-1}(w), history)
 
-In other words, each word enjoys a unique path from the root to itself. Let us assume such a tree as a balanced tree. The length of the path is the same as the heigh of the tree on average. In this way, the final probability (P(w|history)) is the continuous multiplication of probabilities regarding to steps in the path we travel from the root to leaf. Apparently, the time complexity decreases from O(|V|) to O(log(|V|)). But how expensive is it to compute the probability regarding to a specific step? This is the point I am not so clear!
+In other words, each word enjoys a unique path from the root to itself. Let us assume such a tree as a balanced tree. The length of the path is the same as the heigh of the tree on average. In this way, the final probability (P(w|history)) is the continuous multiplication of probabilities regarding to steps in the path we travel from the root to leaf. Apparently, the time complexity decreases from O(|V|) to O(log(|V|)). 
 
-
-
-
------------------------- not done yet, to be continued later --------------------
+But how expensive is it to compute the probability regarding to a specific step? For instance, let us assume we need to compute probabilities regarding to the very first step:
+P(0|history) and P(1|history) (Note that P(0|history) + P(1|history) = 1).
+If we think of the work of Goodman, we still need to count all the words in the vocab, and see which one starts with 0 or 1 to compute P(0|history) and P(1|history). Therefore I was very confusing that we do not speed up the computation at all. Actually I was wrong - there is nothing related to the work of Goodman at this point. That is, P(0|history) is modeled as a simple linear/non-linear function, e.g.: sigm(bias+ one hot vector in vocab * transformation of history)
