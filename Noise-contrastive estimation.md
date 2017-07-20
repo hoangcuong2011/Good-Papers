@@ -21,11 +21,15 @@ Note that P(D=1, w|history) = 1/(k+1) P(w|history) and P(D=0, w|history) = k/(k+
 
 
 P(D=1|w, history) = 1/(k+1) P(w|history)/(1/(k+1) P(w|history)+k/(k+1) P_{noise}(w)) = P(w|history)/(P(w|history)+k P_{noise}(w))
-
+and
 P(D=0|w, history) = k P_{noise}(w)/(P(w|history)+k P_{noise}(w))
 
+Did we make anything easier? Unfortunately, everything is still the same! Our goal is to reduce the problem to that of computing P(D=1|w, history) and P(D=0|w, history). Yet our equation still involves p(w|history), which is obviously too expensive to compute. How to sidestep the problem? Recall that:
 
+P(w|history) = exp(g(w_t,history)) exp(c(history))
 
+where c(history) corresponding to the logarithm of the normalizing constant. NCE sidestep the problem by treating the normalzing constant ans a learned parameter (i.e. instead of computing it directly, we try to induce it through inference)
 
+------------------------------not done yet ------------------------------------
 
 
