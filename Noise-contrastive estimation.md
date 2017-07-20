@@ -7,8 +7,17 @@ of the method.
 
 Recall that for NNLMs, we need to compute an extremely expensive softmax function for every history: P(w|history) = exp(g(w_t,history))/all_word exp(g(w',history))
 
-How to fix the problem? Here is the part that NCE comes into place. It reduces the problem to that of binary classification: discriminating between samples from the data distribution (P(w|history)) and samples from a known noise distribution (P_{noise}(w). These two problems are totally unrelated to each other at first sights, but there is indeed a strong link between them as we will see later.
+How to fix the problem? Here is the part that NCE comes into place. It reduces the problem to that of binary classification: discriminating between samples from the data distribution P(w|history) and samples from a known noise distribution P_{noise}(w). These two problems are totally unrelated to each other at first sights, but there is indeed a strong link between them as we will see later.
 
+Specifically, let us assume that noise samples are k times more frequent than data samples: w is sampled from the mixture
+
+1/(k+1) P(w|history) + k/(k+1) P_{noise}(w)
+
+Let us use a variable D to denote which sample types each word is sampled from (D=1 implies the word samples from data distribution and D=0 implies the word samples from noise distribution). Recall that P(D, w|history) = p(w|history)*p(D|w, histor), we have
+
+P(D|w, history) = P(D, w|history)/p(w|history)
+
+Note that P(D=1, w|history) = 1/(k+1) P(w|history) and P(D=0, w|history) = k/(k+1) P_{noise}(w)
 
 
 
