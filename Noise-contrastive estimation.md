@@ -17,10 +17,12 @@ Let us use a variable D to denote which sample types each word is sampled from (
 
 P(D|w, history) = P(D, w|history)/p(w|history)
 
-Note that P(D=1, w|history) = 1/(k+1) P(w|history) and P(D=0, w|history) = k/(k+1) P_{noise}(w)
+Note that P(D=1, w|history) = 1/(k+1) P(w|history) and P(D=0, w|history) = k/(k+1) P_{noise}(w). We therefore have:
 
 
-P(D=1|w, history) = 1/(k+1) P(w|history)/(1/(k+1) P(w|history)+k/(k+1) P_{noise}(w)) = P(w|history)/P(w|history)+k P_{noise}(w))
+P(D=1|w, history) = 1/(k+1) P(w|history)/(1/(k+1) P(w|history)+k/(k+1) P_{noise}(w)) = P(w|history)/(P(w|history)+k P_{noise}(w))
+
+P(D=0|w, history) = k P_{noise}(w)/(P(w|history)+k P_{noise}(w))
 
 
 
