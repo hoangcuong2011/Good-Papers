@@ -2,7 +2,7 @@
 and A fast and simple algorithm for training neural probabilistic language models - https://www.cs.toronto.edu/~amnih/papers/ncelm.pdf
 
 Noise-contrastive estimation is a classic technique to efficiently train neural language models. It is not SOTA by any means as of
-July 2017) (It has been often observed to produce less competitive performance, though). But it is worthy to have a good understanding
+July 2017 (It has been often observed to produce less competitive performance, though). But it is worthy to have a good understanding
 of the method.
 
 Recall that for NNLMs, we need to compute an extremely expensive softmax function for every history: P(w|history) = exp(g(w_t,history))/all_word exp(g(w',history))
@@ -20,7 +20,7 @@ P(D|w, history) = P(D, w|history)/p(w|history)
 Note that P(D=1, w|history) = 1/(k+1) P(w|history) and P(D=0, w|history) = k/(k+1) P_{noise}(w)
 
 
-
+P(D=1|w, history) = 1/(k+1) P(w|history)/(1/(k+1) P(w|history)+k/(k+1) P_{noise}(w)) = P(w|history)/P(w|history)+k P_{noise}(w))
 
 
 
