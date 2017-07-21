@@ -57,4 +57,4 @@ There is no doubt that the method is classic. Yet the paper can be more solid by
 
 
 ----------------------
-Updated (21th July 2017): There is a work (Strategies for Training Large Vocabulary Neural Language Models - http://www.aclweb.org/anthology/P16-1186 ) that provides a comparison between different clustering methods (Table 4). Here is the result: random < frequency < k-means < weighted k-means. Note that k-means runs on the outputs produced by Hellinger PCA word embeddings.
+Updated (21st July 2017): There is a work (Strategies for Training Large Vocabulary Neural Language Models - http://www.aclweb.org/anthology/P16-1186 ) that provides a comparison between different clustering methods (Table 4). Here is the result: random < frequency < k-means < weighted k-means. Note that k-means runs on the outputs produced by Hellinger PCA word embeddings.
