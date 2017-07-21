@@ -41,7 +41,9 @@ NCE sidestep the problem by treating the normalzing constant as a learned parame
 
 P(w|history) = exp(g(w_t,history)) exp(log c_{history})),
 
-here c_{history} can be understood as a learned parameter corresponding to the logarithm of the normalizing constant with respect to each history: c_{history} = all_word exp(g(w',history))
+here c_{history} can be understood as a learned parameter corresponding to the logarithm of the normalizing constant with respect to each history: c_{history} = all_word exp(g(w',history)). It can be learned during training. Two things surprised me with this trick: it actually works (why?), and second c_{history} closes to 1 in practice. Therefore, as reported by Mnih and Teh, fixing the normalizing constants to 1 instead of learning hem, did not affect the performance of resulting models. You might also wonder why the authors did not try to do the same trick to solve the original problem. The reason is that if we do that, the normalizing constants all_word exp(g(w',history)) can be reached close to zero to achieve large likelihood. Reducing the problem to binary classification, this is not the case (the sum of P(D=1|w, history) and P(D=0|w, history) does not go to arbitrarily large).
+
+As a summary, let me recall what Chris Dyer wrote: NCE transfors the computationally expensive learning problem into a binary classification proxy problem that uses the same parameters but requires statistics that are easier to compute. This is pretty much what NCE is. The idea is pretty non-trivial, and a good one to know!
 
 
 
