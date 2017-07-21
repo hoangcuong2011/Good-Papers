@@ -1,6 +1,7 @@
 # Some good papers I like
 
 *Papers with detailed notes*
+- Differentiated Softmax - http://www.aclweb.org/anthology/P16-1186
 - Noise-contrastive estimation:  A new estimation principle for
 unnormalized statistical models http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf
 - Hierarchical Probabilistic Neural Network Language Model http://www.iro.umontreal.ca/~lisa/pointeurs/hierarchical-nnlm-aistats05.pdf
