@@ -13,6 +13,4 @@ Specifically, let us assume we have three bins of frequencies (A, B, and C). Eac
 in a bin have the same embedding size (d_A, d_B and d_C). With D-softmax our network is structured in this way: each word in D-softmax is represented as a vector with the size of d_A + d_B + d_C. The vector is very sparse. For example, if a word belongs to bin A, then except the first d_A elements, the rest elements in the vector are zero. If a word belongs to bin A, the first d_A elements and the last d_C elements are zero. Finally, if a word belongs to bin C, only the last d_C elements are non-zero.
 The weight matrix is also much larger, but are super sparse (See figure 1).
 
-
-
-
+To me D-Softmax is a nice idea to know. It is, however, not clear from the paper: How to bin words based on their frequency and how to determine embedding size (d_A, d_B and d_C)
