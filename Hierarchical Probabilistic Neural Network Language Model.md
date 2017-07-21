@@ -54,5 +54,7 @@ sigmoid(bias of Node + U*representation of Node + W * hidden layer)
 Finally, how to build such a tree? In this work the authors rely on Wordnet. Experiments show that the method gains a remarkable speed up at more than 250 times, while achiving a competitive performance to the original model.
 
 There is no doubt that the method is classic. Yet the paper can be more solid by having experiment with the model with random clusterings, clustering based on word frequency and other unsupervised clustering methods. The way the authors did experiments is using prior knowledge (Wordnet), which makes the comparison is unfair.
+
+
 ----------------------
 Updated (21th July 2017): There is a work (Strategies for Training Large Vocabulary Neural Language Models - http://www.aclweb.org/anthology/P16-1186 ) that provides a comparison between different clustering methods (Table 4). Here is the result: random < frequency < k-means < weighted k-means. Note that k-means runs on the outputs produced by Hellinger PCA word embeddings.
