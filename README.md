@@ -28,7 +28,7 @@ unnormalized statistical models http://proceedings.mlr.press/v9/gutmann10a/gutma
 
 
 *Papers with quick notes* 
-
+- *Strategies for Training Large Vocabulary Neural Language Models* - http://www.aclweb.org/anthology/P16-1186 - Take-home message: Providing a systematic comparison between various methods for speeding up training neural language models with large vocabulary. Hierarchical softmax works best for large dataset (very surprising), differentied softmax works well for small-scale dataset (but the speed up factor is not so high). NCE works very bad, and Self-normalization works OK.
 - *See, hear, and read: deep aligned representations* - https://arxiv.org/abs/1706.00932: The paper proposes a nice *Cross-Modal Networks* to approach the challenge of learning discriminative representations shared across modalities. Given inputs as different types (image, sound, text), the model produces a *common representation* shared across modalilities. The
 common representation can bring huge benefits. For instance, let us assume we have pairs of images and sound (from videos).
 Let us also assume we have pairs of images and text (from caption datasets). Such a common representation can map between sound and text using images as a bridge (pretty cool!). It is however unclear from the paper how the cross-model networks are designed/implemented. Lots of technical details are missing, and it is very hard to walk through the paper.
