@@ -1,6 +1,7 @@
 # Some good papers I like
 
 *Papers with detailed notes*
+- Multi-way, Multilingual neural machine translation with a shared attention mechanism - http://www.aclweb.org/anthology/N16-1101
 - Differentiated Softmax - http://www.aclweb.org/anthology/P16-1186
 - Noise-contrastive estimation:  A new estimation principle for
 unnormalized statistical models http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf
