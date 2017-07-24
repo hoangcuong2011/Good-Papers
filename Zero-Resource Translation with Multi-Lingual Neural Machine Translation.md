@@ -26,6 +26,6 @@ In experiments, many to one strategy indeed helps build much better NMT system. 
 Now let us come back to our zero-shot translation problem. A strategy to deal with the problem is one to one translation. We translate the source language to a pivot language, and then we translate the target output from the pivot language.
 A better approach is to use multi-source translation strategies: we use both the pivot language and the source language to translate the target output. Unfortunately, this approach does not work well compared to the naive one-to-one translation. The authors hypothesized that the context vectors returned by the encoder are not compatible with the decoder, as we did not do that during training.
 
-So how to fix the problem? They create a pseudo parallel corpus and then use the data for fine-tuning. In this way our system works pretty well.
+So how to fix the problem? They create a pseudo parallel corpus and then use the data for fine-tuning. In this way our system works pretty well. Ironically, using true small size of parallel corpus harms fine-tuning. It only works with true parallel data that is large enough (e.g. > 1M as in the paper)
 
-Overall I really like the paper. The paper is written not so well, though.
+Overall I really like the paper.  The results are very impressive and promising. The paper is written not so well, though.
