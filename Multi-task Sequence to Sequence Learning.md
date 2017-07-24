@@ -3,7 +3,7 @@
 Seq2seq contains an encoder, a decoder. The paper addresses an interesting aspect: can we
 build one decoder and multiple decoders? Can we build multiple encoders and one decoder? Finally, can we build multiple encoder and decoders? Note that the baseline in the paper does not have attention mechanism.
 
-I am particularly interested in the first question: Can we build one encoder and multiple decoders that work for different tasks.
+I am particularly interested in the first two questions. First, can we build one encoder and multiple decoders that work for different tasks.
 In the paper, the authors experiment with three tasks: Machine translation, Parsing. Learning in this case is
 rather straightforward: The model is optimized for each task given a fixed number of parameter updates. When switching between tasks,
 we select randomly a new task with a certain probability. Very surprisingly, adding a very small number of parsing mini-batches, we can improve the translation quality produced by a large-scale NMT system significantly.
