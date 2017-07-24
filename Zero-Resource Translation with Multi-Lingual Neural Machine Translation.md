@@ -21,6 +21,11 @@ There are several strategies we can exploit. One to one translation: one source 
 In the work, the authors propose two different approaches, namely early average and late average. With early average, we take the average of different time-dependent context vector. We also feed input to decoder as the average of encoders' outputs.
 With late average, we simply take the average of output prediction (p(y_{t} = w| y_{<t}) = sum of all languages p(y_{t} = w| y_{<t}, language X) ). The second strategy can be thought of as ensemble with respect to multiple source languages.
 
-In experiments, many to one strategy indeed helps build much better NMT system. However, doing so with single NMT systems also helps a lot (Table 3).
+In experiments, many to one strategy indeed helps build much better NMT system. However, doing so with single NMT systems also helps a lot (Table 3). This is quite confusing indeed (i.e. we hardly have any conclusion from the experiment)
 
-Now let us come back to our zero-shot translation problem. A strategy to deal with the problem is one to one translation. This turns out does not work at all.
+Now let us come back to our zero-shot translation problem. A strategy to deal with the problem is one to one translation. We translate the source language to a pivot language, and then we translate the target output from the pivot language.
+A better approach is to use multi-source translation strategies: we use both the pivot language and the source language to translate the target output. Unfortunately, this approach does not work well compared to the naive one-to-one translation. The authors hypothesized that the context vectors returned by the encoder are not compatible with the decoder, as we did not do that during training.
+
+So how to fix the problem? They create a pseudo parallel corpus and then use the data for fine-tuning. In this way our system works pretty well.
+
+Overall I really like the paper. The paper is written not so well, though.
