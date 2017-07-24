@@ -1,6 +1,7 @@
 # Some good papers I like
 
 *Papers with detailed notes*
+- Zero-Resource Translation with Multi-Lingual Neural Machine Translation - https://arxiv.org/pdf/1606.04164.pdf
 - Multi-way, Multilingual neural machine translation with a shared attention mechanism - http://www.aclweb.org/anthology/N16-1101
 - Differentiated Softmax - http://www.aclweb.org/anthology/P16-1186
 - Noise-contrastive estimation:  A new estimation principle for
