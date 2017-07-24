@@ -14,3 +14,8 @@ in a bin have the same embedding size (d_A, d_B and d_C). With D-softmax our net
 The weight matrix is also much larger, but are super sparse (See figure 1).
 
 To me D-Softmax is a nice idea to know. It is, however, not clear from the paper: How to bin words based on their frequency and how to determine embedding size (d_A, d_B and d_C)
+
+------------------------------
+
+
+Updated (24th July 2017): I understand that it is not really optimal  in the original version because each word cluster uses a disjoint subset of the hidden representation. But how to fix that? The paper (https://arxiv.org/abs/1609.04309) suggests a modification that substantially improves D-softmax. The description is totally unclear, though!
