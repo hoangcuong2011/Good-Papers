@@ -17,6 +17,10 @@ Time-dependent context vector at each time step is nothing different than tradit
 
 
 
-Training the model requires a set of bilingual corpora, not a set of multi-way parallel corpora (which makes sense). There are several strategies we can exploit. One to one translation: one source sentence and one target sentence. Many to one translation: many source sentences, one target sentence. The tricky part, of course, is how to train many to one translation.
+There are several strategies we can exploit. One to one translation: one source sentence and one target sentence. Many to one translation: many source sentences, one target sentence. The tricky part, of course, is how to train many to one translation.
 In the work, the authors propose two different approaches, namely early average and late average. With early average, we take the average of different time-dependent context vector. We also feed input to decoder as the average of encoders' outputs.
-With late average, we simply take the average of output prediction (p(y_{t} = w| y_{<t}) = sum of all languages p(y_{t} = w| y_{<t}, language X) )
+With late average, we simply take the average of output prediction (p(y_{t} = w| y_{<t}) = sum of all languages p(y_{t} = w| y_{<t}, language X) ). The second strategy can be thought of as ensemble with respect to multiple source languages.
+
+In experiments, many to one strategy indeed helps build much better NMT system. However, doing so with single NMT systems also helps a lot (Table 3).
+
+Now let us come back to our zero-shot translation problem. A strategy to deal with the problem is one to one translation. This turns out does not work at all.
