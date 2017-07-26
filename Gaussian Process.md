@@ -35,15 +35,19 @@ way we define the kernel function.
 To have a better understanding, let me show some code https://github.com/hoangcuong2011/GPs. Let us assume we have 40 points
 
 import numpy as np
+
 import matplotlib.pyplot as pl
 
 n = 40
+
 Xtest = np.linspace(0, 10, n).reshape(-1,1)
 
 Our kernel function is squared exponential kernel:
 
 def SquaredExponentialKernel(a, b):
+
 	sqdist = (np.sum(a, 1) - b)**2
+	
 	return np.exp(-.5 * sqdist)
 
 With that kernel function, our covariate matrix is as follows:
@@ -54,12 +58,17 @@ Let us assume we want to draws 100 functions over these points. All we need to d
 a multivariate Gaussian distribution with mean [0, ....., 0] and covariate matrix K_ss. The code is as follows: 
 
 dataPoints = 100
+
 L = np.linalg.cholesky(K_ss + 1e-15*np.eye(n))
+
 f_prior = np.dot(L, np.random.normal(size=(n,dataPoints)))
 
 pl.plot(Xtest, f_prior)
+
 pl.axis([0, 10, -5, 5])
+
 pl.title('Samples from the GP prior')
+
 pl.show()
 
 
