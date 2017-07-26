@@ -4,6 +4,7 @@ of the topic:
 - http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf (I highly recommend this)
 - http://www.cs.ubc.ca/~nando/540-2013/lectures/l6.pdf  (I highly recommend this)
 - http://katbailey.github.io/post/gaussian-processes-for-dummies/
+- https://www.robots.ox.ac.uk/~mebden/reports/GPtutorial.pdf
 
 Even with those references, it is still quite difficult to start learning the topic. I guess this happens for many
 people. Here I want to give a very informal introduction to the topic. 
@@ -17,7 +18,7 @@ You also have a set of N functions f_1, f_2, ..., f_N from an infinite number of
 Why do we need a set of functions instead of a specific and useful function? Think about this: in practice we may want
 to perform a regression, but there doesn't exist any specific function that you defined in advance, e.g. y = ax+b, that perfectly
 matches the data) (See this: http://katbailey.github.io/images/bad_least_squares.png). Because we cannot define such a function,
-it makes senses to find a set of functions f. (???)
+it makes senses to aim to search for a distribution over functions instead.
 
 
 Can we define a distribution over functions? It sounds nontrivial but we can. GPs assume that
@@ -118,12 +119,7 @@ Time for some code again. For convenience, I ignore the noise components in the 
 	mu = np.dot(np.dot(K_testtrain, np.linalg.inv(K_traintrain)), ytrain)
 	SIGMA = K_testtest - np.dot(np.dot(K_testtrain, np.linalg.inv(K_traintrain)), K_traintest.T)
 
-
-
 That is all. Now let us sample 100 vectors from a multivariate Gaussian distribution with mean vector mu and covariate matrix SIGMA. The code is as follows: 
-
-
-
 
 	L = np.linalg.cholesky(SIGMA + 1e-6*np.eye(n))
 	f_post = mu.reshape(-1,1) + np.dot(L, np.random.normal(size=(n,100)))
