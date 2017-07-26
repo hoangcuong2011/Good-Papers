@@ -81,7 +81,7 @@ There are plenty applications of Gaussian processes. Let me explain a toy exampl
 
 We are given a training dataset of m i.i.d. examples: S = {x_i, y_i}. Let us assume a regression model:
 
-y_i = f(x_i) + epsilon_i
+	y_i = f(x_i) + epsilon_i
 
 where epsilon_i are i.i.d. noise variables with independent zero-mean and fixed variance Gaussian distribution. We assume
 a prior distribution over f: a zero-mean Gaussian prior: GP(0, k(.,.)).
@@ -91,24 +91,24 @@ At training time, we want to predict y*_j given each sample x*_j from a set of m
 
 As we assume a prior distribution over f: a zero-mean Gaussian prior, we have:
 
-f, f*| X, X* sample from N(0, K) where K contains four sub-matrices: K(X,X), K(X, X*), K(X*, X), K(X*, X*)
+	f, f*| X, X* sample from N(0, K) where K contains four sub-matrices: K(X,X), K(X, X*), K(X*, X), K(X*, X*)
 
 From our i.i.d. noise assumption, we have that
 
-epsilon, epsilon* sample from N(0, K) where K contains four sub-matrices: sigma^2I, 0, 0^T, sigma^2I
+	epsilon, epsilon* sample from N(0, K) where K contains four sub-matrices: sigma^2I, 0, 0^T, sigma^2I
 
 Recall that y_i = f(x_i) + epsilon_i and y*_i = f(x*_i) + epsilon*_i, we have
 
-y, y*| X, X* sample from N(0, K) where K contains four sub-matrices: K(X,X)+sigma^2I, K(X, X*), K(X*, X), K(X*, X*)sigma^2I
+	y, y*| X, X* sample from N(0, K) where K contains four sub-matrices: K(X,X)+sigma^2I, K(X, X*), K(X*, X), K(X*, X*)sigma^2I
 
 In the end, we can derive y*| y, X, X* from y, y*| X, X* using the rules for conditioning Gaussian (See this http://cs229.stanford.edu/section/more_on_gaussians.pdf).
 
 
-y*| y, X, X* sample from N(u*, SIGMA*), where
+	y*| y, X, X* sample from N(u*, SIGMA*), where
 
-u* = K(X*,X)(K(X,X)+sigma^2 I)^-1 y
+	u* = K(X*,X)(K(X,X)+sigma^2 I)^-1 y
 
-SIGMA* = K(X*, X*) +sigma^2 I - K(X*, X)(K(X, X)+sigma^2 I)^-1 K(X, X*)^T
+	SIGMA* = K(X*, X*) +sigma^2 I - K(X*, X)(K(X, X)+sigma^2 I)^-1 K(X, X*)^T
 
 Time for some code again. For convenience, I ignore the noise components in the model.
 
