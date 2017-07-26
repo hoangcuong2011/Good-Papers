@@ -1,5 +1,9 @@
 # Some good papers I like
 
+*Topics with detailed notes
+- Gaussian processes
+
+
 *Papers with detailed notes*
 - Multi-task Sequence to Sequence Learning - https://arxiv.org/abs/1511.06114
 - Zero-Resource Translation with Multi-Lingual Neural Machine Translation - https://arxiv.org/pdf/1606.04164.pdf
