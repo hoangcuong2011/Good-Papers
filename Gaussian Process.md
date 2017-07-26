@@ -1,5 +1,5 @@
 Gaussian Process
-Gaussian Process is a very interesting model. Besides the classic book Gaussian Processes for Machine Learning (http://www.gaussianprocess.org/gpml/), several sources can be referred as a very basic introduction
+Gaussian Process is a very interesting/beautiful model. Besides the classic book Gaussian Processes for Machine Learning (http://www.gaussianprocess.org/gpml/), several sources can be referred as a very basic introduction
 of the topic:
 - http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf (I highly recommend this)
 - http://www.cs.ubc.ca/~nando/540-2013/lectures/l6.pdf  (I highly recommend this)
@@ -17,11 +17,11 @@ You also have a set of N functions f_1, f_2, ..., f_N from an infinite number of
 
 Why do we need a set of functions instead of a specific and useful function? Think about this: in practice we may want
 to perform a regression, but there doesn't exist any specific function that you defined in advance, e.g. y = ax+b, that perfectly
-matches the data) (See this: http://katbailey.github.io/images/bad_least_squares.png). Because we cannot define such a function,
-it makes senses to aim to find a distribution over functions instead. With the distribution, given the data, we can aim to estimate how likely is a certain prediction for a new test point.
+matches the data) (See this: http://katbailey.github.io/images/bad_least_squares.png). Because we cannot define such a function in advance,
+it makes senses to let the data speaks by itself, i.e. the shape of our functions is totally induced by the data.
 
 
-Can we define a distribution over functions? It sounds nontrivial but we can. GPs assume that
+It sounds nontrivial but we can do that indeed. First, let us find an answer for an "easier" question: Can we define a distribution over functions? GPs assume that
 the function's outputs can be sampled from a multivariate Gaussian distribution with mean U and covariate matrix K in which each element ij in the matrix is defined by a specific kernel function k(x_i, x_j).
 
 The size of U is N, and the size of K is NxN. Not all arbitrary matrices K gives us valid Gaussian Processes: each covariate matrix needs
