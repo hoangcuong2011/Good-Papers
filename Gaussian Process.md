@@ -113,7 +113,7 @@ Time for some code again. For convenience, I ignore the noise components in the 
 
 	K_testtest = SquaredExponentialKernel(Xtest, Xtest, param)
 	Xtrain = np.array([Xtest[3], Xtest[5], Xtest[11]]).reshape(-1,1)
-	ytrain = np.sin(Xtrain) # we assume y = sin(x)
+	ytrain = np.sin(Xtrain) # I assume y = sin(x)
 	
 	mu = np.dot(np.dot(K_testtrain, np.linalg.inv(K_traintrain)), ytrain)
 	SIGMA = K_testtest - np.dot(np.dot(K_testtrain, np.linalg.inv(K_traintrain)), K_traintest.T)
@@ -133,5 +133,6 @@ That is all. Now let us sample 100 vectors from a multivariate Gaussian distribu
 	pl.title('Samples from the GP posterior')
 	pl.show()
 
+You can change the line of code (Xtrain = np.array([Xtest[3], Xtest[5], Xtest[11]]).reshape(-1,1)) to have funs with different training examples. As the number of training examples increases, the size of the confidence region shrinks. This reflects the diminishing uncertainty in the model estimates. 
 
-As we can see, performing prediction in a Gaussian process regression model is very simple and elegant.
+Performing prediction in a Gaussian process regression model is indeed very simple and elegant.
