@@ -2,10 +2,11 @@ Gaussian Process
 Gaussian Process is a very interesting model. Besides the classic book Gaussian Processes for Machine Learning (http://www.gaussianprocess.org/gpml/), several sources can be referred as a very basic introduction
 of the topic:
 - http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf (I highly recommend this)
+- http://www.cs.ubc.ca/~nando/540-2013/lectures/l6.pdf  (I highly recommend this)
 - http://katbailey.github.io/post/gaussian-processes-for-dummies/
 
-Even with those references, it is still quite difficult to start learning the topic. I guess this happens for lots of
-people. Here I want to give a very informal introduction to the topic. I am interested in the topic, but I am not knowledgeable by anymeans. Despite that, my viewpoint is from a dummy and I hope it will be helpful for beginner.
+Even with those references, it is still quite difficult to start learning the topic. I guess this happens for many
+people. Here I want to give a very informal introduction to the topic. 
 
 So what is GP? You can think GP as distribution over functions. It sounds fancy at first sights, but the concept is indeed
 straightforward. You can imagine you have a subset of points from an infinite number of points:
@@ -102,15 +103,35 @@ y, y*| X, X* sample from N(0, K) where K contains four sub-matrices: K(X,X)+sigm
 In the end, we can derive y*| y, X, X* from y, y*| X, X* using the rules for conditioning Gaussian (See this http://cs229.stanford.edu/section/more_on_gaussians.pdf).
 
 
+y*| y, X, X* sample from N(u*, SIGMA*), where
+
+u* = K(X*,X)(K(X,X)+sigma^2 I)^-1 y
+
+SIGMA* = K(X*, X*) +sigma^2 I - K(X*, X)(K(X, X)+sigma^2 I)^-1 K(X, X*)^T
+
+Time for some code again. For convenience, I ignore the noise components in the model.
+
+	K_testtest = SquaredExponentialKernel(Xtest, Xtest, param)
+	Xtrain = np.array([Xtest[3], Xtest[5], Xtest[11]]).reshape(-1,1)
+	ytrain = np.sin(Xtrain) # we assume y = sin(x)
+	
+	mu = np.dot(np.dot(K_testtrain, np.linalg.inv(K_traintrain)), ytrain)
+	SIGMA = K_testtest - np.dot(np.dot(K_testtrain, np.linalg.inv(K_traintrain)), K_traintest.T)
+
+
+
+That is all. Now let us sample 100 vectors from a multivariate Gaussian distribution with mean vector mu and covariate matrix SIGMA. The code is as follows: 
 
 
 
 
+	L = np.linalg.cholesky(SIGMA + 1e-6*np.eye(n))
+	f_post = mu.reshape(-1,1) + np.dot(L, np.random.normal(size=(n,100)))
+	pl.plot(Xtrain, ytrain, 'bs', ms=8)
+	pl.plot(Xtest, f_post)
+	pl.axis([-5, 5, -3, 3])
+	pl.title('Samples from the GP posterior')
+	pl.show()
 
 
-
-
-
-
-
------------------ far from finished yet -----------------------
+As we can see, performing prediction in a Gaussian process regression model is very simple and elegant.
