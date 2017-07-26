@@ -18,7 +18,7 @@ You also have a set of N functions f_1, f_2, ..., f_N from an infinite number of
 Why do we need a set of functions instead of a specific and useful function? Think about this: in practice we may want
 to perform a regression, but there doesn't exist any specific function that you defined in advance, e.g. y = ax+b, that perfectly
 matches the data) (See this: http://katbailey.github.io/images/bad_least_squares.png). Because we cannot define such a function,
-it makes senses to aim to search for a distribution over functions instead.
+it makes senses to aim to find a distribution over functions instead. With the distribution, given the data, we can aim to estimate how likely is a certain prediction for a new test point.
 
 
 Can we define a distribution over functions? It sounds nontrivial but we can. GPs assume that
@@ -27,7 +27,7 @@ the function's outputs can be sampled from a multivariate Gaussian distribution 
 The size of U is N, and the size of K is NxN. Not all arbitrary matrices K gives us valid Gaussian Processes: each covariate matrix needs
 to be positive semidefinite, i.e. x^T K x >= 0 for all vector x with size N. But how to check a matrix is positive semidefinite?
 I don't see many articles about this, perhaps it is not easy to do so. Also we normally don't have to do much in practice because kernel functions are well studied (well-studied valid kernel functions can be referred to this link: http://www.cs.toronto.edu/~duvenaud/cookbook/index.html).
-Perhaps squared exponential kernel (k(x, x') = exp(-0.5 * (x - x') ^ 2) is the most common one.
+Perhaps squared exponential kernel (k(x, x') = sigma^2 exp(-0.5 * (1/param)^2 (x - x') ^ 2) is the most common one. For the sake of simplicity, I ignore sigma and param now, but keep in mind that they can be tuned automatically.
 
 What is the key here? A GP specifies a probability distribution over functions at infinite number of input points with two notable things: First, the distribution is Gaussian distribution, so that the marginal distribution over any subset of input points must have a joint multivariate Gaussian distribution (see this https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Two_normally_distributed_random_variables_need_not_be_jointly_bivariate_normal). Second, the output of the function at those points to be similar if the kernel function
 at those points to be similar. Now you know why people usually say: "A GP defines a prior over functions". Prior means the
