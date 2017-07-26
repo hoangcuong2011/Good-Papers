@@ -1,17 +1,16 @@
 Gaussian Process
-Gaussian Process is a very interesting model that models uncertainty. Besides the classic book Gaussian Processes for Machine Learning (http://www.gaussianprocess.org/gpml/), several sources can be referred as a very basic introduction
+Gaussian Process is a very interesting model. Besides the classic book Gaussian Processes for Machine Learning (http://www.gaussianprocess.org/gpml/), several sources can be referred as a very basic introduction
 of the topic:
 - http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf (I highly recommend this)
 - http://katbailey.github.io/post/gaussian-processes-for-dummies/
 
 Even with those references, it is still quite difficult to start learning the topic. I guess this happens for lots of
-people. Here I want to give a very informal introduction to the topic. I am interested in the topic, but I am not knowledgable
-by anymeans. Despite that, my viewpoint is from a dummy and I hope it will be helpful for beginner.
+people. Here I want to give a very informal introduction to the topic. I am interested in the topic, but I am not knowledgeable by anymeans. Despite that, my viewpoint is from a dummy and I hope it will be helpful for beginner.
 
 So what is GP? You can think GP as distribution over functions. It sounds fancy at first sights, but the concept is indeed
-straightforward. You can imagine you have a set of points:
+straightforward. You can imagine you have a subset of points from an infinite number of points:
 [x_1 = 1, x_2 = 2, x_3 = 3, x_4 = 4, x_5 = 5]
-You have a set of functions f, in which each specific function f transforms the set of points to another space:
+You also have a set of N functions f_1, f_2, ..., f_N from an infinite number of functions. Each specific function f transforms the set of points to another space:
 [f(1), f(2), f(3), f(4), f(5)].
 
 Why do we need a set of functions instead of a specific and useful function? Think about this: in practice we may want
@@ -20,7 +19,7 @@ matches the data) (See this: http://katbailey.github.io/images/bad_least_squares
 it makes senses to find a set of functions f. (???)
 
 
-Let us assume we have N different functions: f_1, f_2, ..., f_N. Can we define a distribution over functions? GP assume that
+Can we define a distribution over functions? It sounds nontrivial but we can. GPs assume that
 the function's outputs can be sampled from a multivariate Gaussian distribution with mean U and covariate matrix K in which each element ij in the matrix is defined by a specific kernel function k(x_i, x_j).
 
 The size of U is N, and the size of K is NxN. Not all arbitrary matrices K gives us valid Gaussian Processes: each covariate matrix needs
@@ -28,9 +27,9 @@ to be positive semidefinite, i.e. x^T K x >= 0 for all vector x with size N. But
 I don't see many articles about this, perhaps it is not easy to do so. Also we normally don't have to do much in practice because kernel functions are well studied (well-studied valid kernel functions can be referred to this link: http://www.cs.toronto.edu/~duvenaud/cookbook/index.html).
 Perhaps squared exponential kernel (k(x, x') = exp(-0.5 * (x - x') ^ 2) is the most common one.
 
-What is the key here? I believe the key idea is the output of the function at points to be similar if the kernel function
+What is the key here? A GP specifies a probability distribution over functions at infinite number of input points with two notable things: First, the distribution is Gaussian distribution, so that the marginal distribution over any subset of input points must have a joint multivariate Gaussian distribution (see this https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Two_normally_distributed_random_variables_need_not_be_jointly_bivariate_normal). Second, the output of the function at those points to be similar if the kernel function
 at those points to be similar. Now you know why people usually say: "A GP defines a prior over functions". Prior means the
-way we define the kernel function.
+way we assume the function's outputs can be sampled from a multivariate Gaussian distribution and the way define the kernel function.
 
 To have a better understanding, let me show some code https://github.com/hoangcuong2011/GPs. Let us assume we have 40 points
 
@@ -46,8 +45,7 @@ Our kernel function is squared exponential kernel:
 
 	def SquaredExponentialKernel(a, b):
 
-		sqdist = (np.sum(a, 1) - b)**2
-	
+		sqdist = (np.sum(a, 1).reshape(-1,1) - np.sum(b,1))**2
 		return np.exp(-.5 * sqdist)
 
 With that kernel function, our covariate matrix is as follows:
@@ -73,6 +71,42 @@ a multivariate Gaussian distribution with mean [0, ....., 0] and covariate matri
 
 
 Note that the code involves Get Cholesky decomposition (see this https://en.wikipedia.org/wiki/Multivariate_normal_distribution to know why)
+
+
+That is all: we have just plotted a set of functions that the outputs are sampled from a motivariate zero-mean Gaussian distribution and covariate matrix K_ss. 
+
+There are plenty applications of Gaussian processes. Let me explain a toy example with The Gaussian process regression model to see how useful it is. I took the example from http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf
+
+We are given a training dataset of m i.i.d. examples: S = {x_i, y_i}. Let us assume a regression model:
+
+y_i = f(x_i) + epsilon_i
+
+where epsilon_i are i.i.d. noise variables with independent zero-mean and fixed variance Gaussian distribution. We assume
+a prior distribution over f: a zero-mean Gaussian prior: GP(0, k(.,.)).
+
+At training time, we want to predict y*_j given each sample x*_j from a set of m* i.i.d. examples: S* = {x*_j}
+
+
+As we assume a prior distribution over f: a zero-mean Gaussian prior, we have:
+
+f, f*| X, X* sample from N(0, K) where K contains four sub-matrices: K(X,X), K(X, X*), K(X*, X), K(X*, X*)
+
+From our i.i.d. noise assumption, we have that
+
+epsilon, epsilon* sample from N(0, K) where K contains four sub-matrices: sigma^2I, 0, 0^T, sigma^2I
+
+Recall that y_i = f(x_i) + epsilon_i and y*_i = f(x*_i) + epsilon*_i, we have
+
+y, y*| X, X* sample from N(0, K) where K contains four sub-matrices: K(X,X)+sigma^2I, K(X, X*), K(X*, X), K(X*, X*)sigma^2I
+
+In the end, we can derive y*| y, X, X* from y, y*| X, X* using the rules for conditioning Gaussian (See this http://cs229.stanford.edu/section/more_on_gaussians.pdf).
+
+
+
+
+
+
+
 
 
 
