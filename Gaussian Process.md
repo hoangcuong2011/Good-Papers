@@ -18,12 +18,15 @@ the function's outputs can be sampled from a multivariate Gaussian distribution 
 
 
 Concretely, you can imagine you have a subset of points from an infinite number of points:
-[x_1 = 1, x_2 = 2, x_3 = 3, x_4 = 4, x_5 = 5]
+	
+	[x_1 = 1, x_2 = 2, x_3 = 3, x_4 = 4, x_5 = 5]
+	
 You also have a set of N functions f_1, f_2, ..., f_N from an infinite number of functions. Each specific function f transforms the set of points to another space:
-[f(1), f(2), f(3), f(4), f(5)].
+	
+	[f(1), f(2), f(3), f(4), f(5)].
 
 
-Let us assume we have 1000000 (It doesn't matter the umber such functions. GPs assume [f(1), f(2), f(3), f(4), f(5)] from those 1000000 functions are sampled from a multivariate Gaussian distribution. The size of U is N, and the size of K is NxN.
+Let us assume we have 1000000 (It doesn't matter the specic number such functions). GPs assume [f(1), f(2), f(3), f(4), f(5)] from those 1000000 functions are sampled from a multivariate Gaussian distribution. The size of U is N, and the size of K is NxN.
 
 Not all arbitrary matrices K give us valid Gaussian Processes: each covariate matrix needs
 to be positive semidefinite, i.e. x^T K x >= 0 for all vector x with size N. But how to check a matrix is positive semidefinite?
