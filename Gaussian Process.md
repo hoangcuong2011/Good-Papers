@@ -21,7 +21,7 @@ matches the data) (See this: http://katbailey.github.io/images/bad_least_squares
 it makes senses to let the data speaks by itself, i.e. the shape of our functions is totally induced by the data.
 
 
-It sounds nontrivial but we can do that indeed. First, let us find an answer for an "easier" question: Can we define a distribution over functions? GPs assume that
+It sounds nontrivial but we can do that indeed. First, let us find an answer to an "easier" question: Can we define a distribution over functions? GPs assume that
 the function's outputs can be sampled from a multivariate Gaussian distribution with mean U and covariate matrix K in which each element ij in the matrix is defined by a specific kernel function k(x_i, x_j).
 
 The size of U is N, and the size of K is NxN. Not all arbitrary matrices K gives us valid Gaussian Processes: each covariate matrix needs
