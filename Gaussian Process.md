@@ -10,30 +10,31 @@ Even with those references, it is still quite difficult to start learning the to
 people. Here I want to give a very informal introduction to the topic. 
 
 So what is GP? You can think GP as distribution over functions. It sounds fancy at first sights, but the concept is indeed
-straightforward. You can imagine you have a subset of points from an infinite number of points:
+straightforward. First, why do we need a set of functions instead of a specific and useful function? Think about this: in practice we may want
+to perform a regression, but there doesn't exist any specific function that you defined in advance, e.g. y = ax+b, that perfectly
+matches the data) (See this: http://katbailey.github.io/images/bad_least_squares.png). Because we cannot define such a function in advance, we then let them free: let the data speaks by itself, i.e. the shape of our functions is totally induced by the data. What we need to control is simply the type of distribution of functions. GPs assume that
+the function's outputs can be sampled from a multivariate Gaussian distribution with mean U and covariate matrix K in which each element ij in the matrix is defined by a specific kernel function k(x_i, x_j).
+
+
+
+Concretely, you can imagine you have a subset of points from an infinite number of points:
 [x_1 = 1, x_2 = 2, x_3 = 3, x_4 = 4, x_5 = 5]
 You also have a set of N functions f_1, f_2, ..., f_N from an infinite number of functions. Each specific function f transforms the set of points to another space:
 [f(1), f(2), f(3), f(4), f(5)].
 
-Why do we need a set of functions instead of a specific and useful function? Think about this: in practice we may want
-to perform a regression, but there doesn't exist any specific function that you defined in advance, e.g. y = ax+b, that perfectly
-matches the data) (See this: http://katbailey.github.io/images/bad_least_squares.png). Because we cannot define such a function in advance,
-it makes senses to let the data speaks by itself, i.e. the shape of our functions is totally induced by the data.
 
+Let us assume we have 1000000 (It doesn't matter the umber such functions. GPs assume [f(1), f(2), f(3), f(4), f(5)] from those 1000000 functions are sampled from a multivariate Gaussian distribution. The size of U is N, and the size of K is NxN.
 
-It sounds nontrivial but we can do that indeed. First, let us find an answer to an "easier" question: Can we define a distribution over functions? GPs assume that
-the function's outputs can be sampled from a multivariate Gaussian distribution with mean U and covariate matrix K in which each element ij in the matrix is defined by a specific kernel function k(x_i, x_j).
-
-The size of U is N, and the size of K is NxN. Not all arbitrary matrices K gives us valid Gaussian Processes: each covariate matrix needs
+Not all arbitrary matrices K give us valid Gaussian Processes: each covariate matrix needs
 to be positive semidefinite, i.e. x^T K x >= 0 for all vector x with size N. But how to check a matrix is positive semidefinite?
 I don't see many articles about this, perhaps it is not easy to do so. Also we normally don't have to do much in practice because kernel functions are well studied (well-studied valid kernel functions can be referred to this link: http://www.cs.toronto.edu/~duvenaud/cookbook/index.html).
 Perhaps squared exponential kernel (k(x, x') = sigma^2 exp(-0.5 * (1/param)^2 (x - x') ^ 2) is the most common one. For the sake of simplicity, I ignore sigma and param now, but keep in mind that they can be tuned automatically.
 
-What is the key here? A GP specifies a probability distribution over functions at infinite number of input points with two notable things: First, the distribution is Gaussian distribution, so that the marginal distribution over any subset of input points must have a joint multivariate Gaussian distribution (see this https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Two_normally_distributed_random_variables_need_not_be_jointly_bivariate_normal). Second, the output of the function at those points to be similar if the kernel function
+So the take home message is that a GP specifies a probability distribution over functions at infinite number of input points with two notable things: First, the distribution is Gaussian distribution, so that the marginal distribution over any subset of input points must have a joint multivariate Gaussian distribution (see this https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Two_normally_distributed_random_variables_need_not_be_jointly_bivariate_normal). Second, the output of the function at those points to be similar if the kernel function
 at those points to be similar. Now you know why people usually say: "A GP defines a prior over functions". Prior means the
 way we assume the function's outputs can be sampled from a multivariate Gaussian distribution and the way define the kernel function.
 
-To have a better understanding, let me show some code https://github.com/hoangcuong2011/GPs. Let us assume we have 40 points
+Let me show some basic code https://github.com/hoangcuong2011/GPs. Let us assume we have 40 points
 
 	import numpy as np
 
