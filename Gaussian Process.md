@@ -6,6 +6,7 @@ of the topic:
 - http://katbailey.github.io/post/gaussian-processes-for-dummies/
 - https://www.robots.ox.ac.uk/~mebden/reports/GPtutorial.pdf
 - http://people.eng.unimelb.edu.au/tcohn/papers/gptut_alta14.pdf (I highly recommend this once you have some basic understanding of GPs)
+- http://etheses.whiterose.ac.uk/9968/1/Damianou_Thesis.pdf  (I highly recommend this once you have some basic understanding of GPs)
 
 Even with those references, it is still quite difficult to start learning the topic. I guess this happens for many
 people. Here I want to give a very informal introduction to the topic. 
