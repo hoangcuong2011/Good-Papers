@@ -1,4 +1,6 @@
 # Some good papers I like
+*Basic Background
+- Gaussian CheatSheet
 
 *Topics with detailed notes
 - Gaussian processes
