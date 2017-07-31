@@ -36,3 +36,8 @@ If we find a subset that explains the real data well, we can drastically decreas
 only O(M^3).  Once the inversion is computed, prediction is O(NM^2) for predictive mean, but still O(N^2M) for predictive variance (NN * NM * MM * MN -> O(N^2M)). The way the authors circumvent this difficulty is to assume the training data is generated independently. This means that our SIGMA matrix is diagonal. There are only N elements in the predictive variance we need to compute, and the complexity is thus N (11 * 1M * MM * M1) = NM^2. It is very smart to do so, even though I believe 
 it hurts the accuracy.
 
+Recall that
+
+    p(Y) = \integral d YY p(Y|YY)p(YY) = N(0, K_{NM} K_{MM}^-1 K_{MN} + DIAG(K(x, x) - K(x, XX)K(XX, XX)^-1 K(XX, x)^T))
+
+To understand why (see this https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md)
