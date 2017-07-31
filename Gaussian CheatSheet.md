@@ -12,7 +12,19 @@ Then
 
     p(Y) = \integral df p(y|f)p(f) = N(0, A + U B U^T )
 
-Let see how useful this is (For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - pages 38-39). Let us assume U = K_{NM}K_{MM}^-1 and B = K_{MM}. The tricky part is U B U^T, which can be computed
+Let see how useful this is. Consider a very simple example:
+
+    f is samples from N(0, covarance B)
+And
+
+    Y samples from N(f, covariance A)
+    
+Then
+
+    P(Y) = \integral df p(y|f)p(f) = N(0, A+ I B I^T) = N(0, A+ B)
+    
+
+Let us turn to a somewhat more involved example (For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - pages 38-39). Let us assume U = K_{NM}K_{MM}^-1 and B = K_{MM}. The tricky part is U B U^T, which can be computed
 as:
 
       K_{NM}K_{MM}^-1 K_{MM} (K_{NM}K_{MM}^-1)^T
@@ -20,4 +32,4 @@ as:
     = K_{NM} I K_{MM}^T)^-1 (K_{NM})^T (use the rule K_{MM}^-1 K_{MM} = I and the rule (A^-1)^T = (A^T)^-1
     = K_{NM} K_{MM}^-1 K_{MN} (K_{MM} is a symmetric matrix)
 
-So beautiful it is!
+How beautiful it is!
