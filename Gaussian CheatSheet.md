@@ -12,7 +12,7 @@ Then
 
     p(Y) = \integral df p(y|f)p(f) = N(0, A + U B U^T )
 
-Let see how useful this is (For reference see this For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - pages 38-39). Let us assume U = K_{NM}K_{MM}^-1 and B = K_{MM}. The tricky part is U B U^T, which can be computed
+Let see how useful this is (For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - pages 38-39). Let us assume U = K_{NM}K_{MM}^-1 and B = K_{MM}. The tricky part is U B U^T, which can be computed
 as:
 
       K_{NM}K_{MM}^-1 K_{MM} (K_{NM}K_{MM}^-1)^T
