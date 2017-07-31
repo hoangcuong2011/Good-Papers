@@ -33,6 +33,6 @@ The way the authors fix the problem is quite elegant: we first find a very small
     SIGMA = K(x, x) - K(x, XX)K(XX, XX)^-1 K(XX, x)^T
 
 If we find a subset that explains the real data well, we can drastically decrease training cost: the inversion of the convariance matrix takes
-only O(M^3).  Once the inversion is computed, prediction is O(NM^2) for predictive mean, but still O(N^2M) for predictive variance. Fortunately we don't need to perform those predictions as we will see.
-
+only O(M^3).  Once the inversion is computed, prediction is O(NM^2) for predictive mean, but still O(N^2M) for predictive variance (NN * NM * MM * MN -> O(N^2M)). The way the authors circumvent this difficulty is to assume the training data is generated independently. This means that our SIGMA matrix is diagonal. There are only N elements in the predictive variance we need to compute, and the complexity is thus N (11 * 1M * MM * M1) = NM^2. It is very smart to do so, even though I believe 
+it hurts the accuracy.
 
