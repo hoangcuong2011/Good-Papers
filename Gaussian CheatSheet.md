@@ -1,7 +1,7 @@
 - Gaussian CheatSheet
 Gaussian distribution has a lot of beautiful formula that we might encounter them in various cases. Here I show some of them.
 
-1. Gaussian Indentities. (For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - page 124)
+1. *Gaussian Indentities*. (For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - page 124)
 Let us assume we have a Gaussian distribution on a vector y:
     Y samples from N(mean U*f, covariance A)
     
