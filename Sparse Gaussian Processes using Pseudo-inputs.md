@@ -1,7 +1,7 @@
 - Sparse Gaussian Processes using Pseudo-inputs - https://papers.nips.cc/paper/2857-sparse-gaussian-processes-using-pseudo-inputs
 
 Gaussian Processes is a very interesting/beautiful model (see this https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20Process.md).
-A problem with GPs is that it requires a complexity of O(N^3) to train. This paper proposes a new solution that has only O(M^2N) training cost. How? I found the idea is very smart, and to understand it let us first reexamine the way we made prediction with GPs.
+A problem with GPs is that it requires a complexity of O(N^3) to train. This paper proposes a new solution that has only O(M^2N) training cost. How? I found the idea very smart, and to understand it let us first reexamine the way we made prediction with GPs.
 
 For simplicity, let us assume a noise-free GP model that is trained on a data set of N input vectors X with dimension D and corresponding real valued target vector Y, i.e. our underlying latent function f can be sampled from the following distribution:
 
@@ -21,8 +21,7 @@ During test time, we can made predict to a new data point x* by sampling a value
 
     SIGMA* = K(x*, x*) - K(x*, X)K(X, X)^-1 K(X, x*)^T
     
-Two things are important here. First, during training we may select a small subset to learn model parameters, I guess.
-But during test time, it is more complicate: we need to compute the inversion of the covariance matrix K(X, X)^-1. Once the inversion is computed, prediction is O(N^2) for both the ppredictive mean and predictive variance per new test point.
+Two things are important here. First, during training we may select a small subset to learn model parameters, I guess. This has dis-advantage, though: we need to optimize model hyperparameters, and we also don't know how to select such a subset in the first place. Second, during test time, we need to compute the inversion of the covariance matrix K(X, X)^-1. Once the inversion is computed, prediction is O(N^2) for both the ppredictive mean and predictive variance per new test point.
 
 The way the authors fix the problem is quite elegant: we first find a very small subset XX, YY with size M of training data that represents all the training data: i.e., we assume each training data point is sampled from the following distribution
 
@@ -42,3 +41,9 @@ Recall that
     = N(0, K_{NM} K_{MM}^-1 K_{MN} + DIAG(K(x, x) - K(x, XX)K(XX, XX)^-1 K(XX, x)^T))
 
 To understand why (see this https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md)
+
+From P(Y) we can perform prediction at new test case. Admittedly I was lost at Eqs. 2.10 in http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf 
+
+The advantage of the model is that we can optimize even the selection of pseudo-inputs. The derivation of that is too long and tedious (see http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf).
+
+In general this is a very good work. Experiment results show that with just M = 20, 25 we can achieve a remarkably competitive performance to full GPs. I learn a lot from this paper and I hope it is the case for its interested readers as well.
