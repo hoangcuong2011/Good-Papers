@@ -38,6 +38,7 @@ it hurts the accuracy.
 
 Recall that
 
-    p(Y) = \integral d YY p(Y|YY)p(YY) = N(0, K_{NM} K_{MM}^-1 K_{MN} + DIAG(K(x, x) - K(x, XX)K(XX, XX)^-1 K(XX, x)^T))
+    p(Y) = \integral d YY p(Y|YY)p(YY) 
+    = N(0, K_{NM} K_{MM}^-1 K_{MN} + DIAG(K(x, x) - K(x, XX)K(XX, XX)^-1 K(XX, x)^T))
 
 To understand why (see this https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md)
