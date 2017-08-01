@@ -137,4 +137,4 @@ That is all. Now let us sample 100 vectors from a multivariate Gaussian distribu
 
 You can change the line of code (Xtrain = np.array([Xtest[3], Xtest[5], Xtest[11]]).reshape(-1,1)) to have funs with different training examples. As the number of training examples increases, the size of the confidence region shrinks. This reflects the diminishing uncertainty in the model estimates. 
 
-Performing prediction in a Gaussian process regression model is indeed very simple and elegant.
+Performing prediction in a Gaussian process regression model is indeed very simple and elegant. One problem with the model is computational cost: it takes O(N^3) to do inference. In practice, this problem is solved with a very neat idea of sparse GPs (See this for a reference https://github.com/hoangcuong2011/Good-Papers/blob/master/Sparse%20Gaussian%20Processes%20using%20Pseudo-inputs.md)
