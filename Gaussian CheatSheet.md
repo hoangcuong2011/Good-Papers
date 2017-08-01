@@ -1,7 +1,8 @@
 - Gaussian CheatSheet
+
 Gaussian distribution has a lot of beautiful formula that we might encounter them in various cases. Here I show some of them.
 
-1. *Gaussian Indentities*. (For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - page 124)
+1. *Gaussian Indentities* (For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - page 124)
 Let us assume we have a Gaussian distribution on a vector y:
     Y samples from N(mean U*f, covariance A)
     
@@ -33,3 +34,34 @@ as:
     = K_{NM} K_{MM}^-1 K_{MN} (K_{MM} is a symmetric matrix)
 
 How beautiful it is!
+
+2. *Conditioning Gaussian* (For reference see this http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf)
+
+Let us assume 
+
+    X samples from N(U_X, SIGMA_XX)
+
+    Y samples from N(U_Y, SIGMA_YY)
+    
+The conditional densities are also Gaussian
+
+    X|Y samples N(U_X + SIGMA_XY SIGMA_YY^-1 (Y-U_Y), SIGMA_XX -SIGMA_XY SIGMA_YY^-1 SIGMA_YX)
+    Y|X samples N(U_Y + SIGMA_YX SIGMA_XX^-1 (X-U_X), SIGMA_YY -SIGMA_YX SIGMA_XX^-1 SIGMA_XY)
+
+See http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf for a proof.
+This is one of the most useful formula I have seen regardingto Gaussian distribution. For example, let us assume:
+
+    X, Y samples from N(0, SIGMA_XY)
+
+Then we have
+
+    X samples from N(0, SIGMA_XX)
+    Y samples from N(0, SIGMA_YY)
+    
+The conditional densities are as follows:
+
+    Y|X samples from N(SIGMA_YX SIGMA_XX^-1 X, SIGMA_YY -SIGMA_YX SIGMA_XX^-1 SIGMA_XY)
+    
+In Gaussian Processes, we perform prediction per each new test case using this formula.
+
+
