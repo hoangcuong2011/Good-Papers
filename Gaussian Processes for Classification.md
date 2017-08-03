@@ -31,3 +31,8 @@ Second we need to compute this function
 
     P(y* = 1|x, y, x*) = integral df* prior(f*)P(f*|x, y, x*)
 Here prior(f*) is the value of squashing the output onto [0, 1]. It is however not trivial at all to compute P(f*|x, y, x*) (because p(f|x, y) is not a Gaussian distribution, i.e. y is only +1, -1 and therefore it is not the case) and P(y* = 1|x, y, x*) (because prior(f*) is not a Gaussian distribution).
+
+The perhaps only way to address the problem is using approximation. We first focus on computing P(f*|x, y, x*), which is difficult because of p(f|x, y). Laplace's method can be a solution. Let us assume f^ as the solution of
+
+    f^ = argmax_f p(f|x, y)
+   
