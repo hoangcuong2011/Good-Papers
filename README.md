@@ -8,6 +8,7 @@
 
 
 **Papers with detailed notes**
+- *Gaussian Processes for Classification* - Chapter 3 of the book Gaussian Processes for Machine Learning http://www.gaussianprocess.org/gpml/chapters/RW3.pdf
 - *Sparse Gaussian Processes using Pseudo-inputs* - https://papers.nips.cc/paper/2857-sparse-gaussian-processes-using-pseudo-inputs
 - *Multi-task Sequence to Sequence Learning* - https://arxiv.org/abs/1511.06114
 - *Zero-Resource Translation with Multi-Lingual Neural Machine Translation* - https://arxiv.org/pdf/1606.04164.pdf
