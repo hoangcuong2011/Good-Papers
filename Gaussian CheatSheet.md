@@ -64,4 +64,18 @@ The conditional densities are as follows:
     
 In Gaussian Processes, we perform prediction per each new test case using this formula.
 
+3. Laplace’s technique: normal approximation to posterior (see reference: http://www2.stat.duke.edu/~st118/sta250/laplace.pdf and http://www.math.tut.fi/~piche/bayes/notes08.pdf)
 
+Let us assume a model q(theta). Doing a second order Taylor expansion of q(theta) gives us:
+
+    q(theta) \approx q(theta^) + (theta-theta^) q'(theta^) + 1/2 (theta-theta^)^2 q''(theta^)
+
+Let us choose theta^ as follows
+    
+    theta^ = argmax_{theta} q(theta)
+    
+In this way q'(theta^) = 0. Therefore,
+
+    q(theta) \approx q(theta^) + 1/2 (theta-theta^)^2 q''(theta^)
+    
+ To be continued ....
