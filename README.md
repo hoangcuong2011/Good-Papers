@@ -1,20 +1,21 @@
 # Some good papers I like
-*Basic Background
+**Basic Background**
 - Gaussian CheatSheet
 
-*Topics with detailed notes
-- Gaussian processes
+**Topics with detailed notes**
+- *Gaussian processes*
+- *Gaussian Processes with Notes*
 
 
-*Papers with detailed notes*
-- Sparse Gaussian Processes using Pseudo-inputs - https://papers.nips.cc/paper/2857-sparse-gaussian-processes-using-pseudo-inputs
-- Multi-task Sequence to Sequence Learning - https://arxiv.org/abs/1511.06114
-- Zero-Resource Translation with Multi-Lingual Neural Machine Translation - https://arxiv.org/pdf/1606.04164.pdf
-- Multi-way, Multilingual neural machine translation with a shared attention mechanism - http://www.aclweb.org/anthology/N16-1101
-- Differentiated Softmax - http://www.aclweb.org/anthology/P16-1186
-- Noise-contrastive estimation:  A new estimation principle for
-unnormalized statistical models http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf
-- Hierarchical Probabilistic Neural Network Language Model http://www.iro.umontreal.ca/~lisa/pointeurs/hierarchical-nnlm-aistats05.pdf
+**Papers with detailed notes**
+- *Sparse Gaussian Processes using Pseudo-inputs* - https://papers.nips.cc/paper/2857-sparse-gaussian-processes-using-pseudo-inputs
+- *Multi-task Sequence to Sequence Learning* - https://arxiv.org/abs/1511.06114
+- *Zero-Resource Translation with Multi-Lingual Neural Machine Translation* - https://arxiv.org/pdf/1606.04164.pdf
+- *Multi-way, Multilingual neural machine translation with a shared attention mechanism* - http://www.aclweb.org/anthology/N16-1101
+- *Differentiated Softmax* - http://www.aclweb.org/anthology/P16-1186
+- *Noise-contrastive estimation:  A new estimation principle for
+unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf
+- *Hierarchical Probabilistic Neural Network Language Model* - http://www.iro.umontreal.ca/~lisa/pointeurs/hierarchical-nnlm-aistats05.pdf
 - *Variational Inference with Normalizing Flows*: https://arxiv.org/abs/1505.05770
 - *MADE: Masked Autoencoder for Distribution Estimation*: https://arxiv.org/abs/1502.03509
 - *Improving Variational Inference with Inverse Autoregressive Flow*: https://arxiv.org/abs/1606.04934
@@ -38,7 +39,7 @@ unnormalized statistical models http://proceedings.mlr.press/v9/gutmann10a/gutma
 
 
 
-*Papers with quick notes* 
+**Papers with quick notes**
 - *Efficient softmax approximation for GPUs - arXiv* - https://arxiv.org/abs/1609.04309 - Take-home message: Providing a systematic comparison between various methods for speeding up training NLMs with large vocabulary. The paper also proposes an one that pretty fits to GPUs. Their method is very technical to follow, though. The proposed one works best. Meanwhile, their modification to Differentiated Softmax works pretty well. But it is totally unclear to me how they modify D-Softmax.
 - *Strategies for Training Large Vocabulary Neural Language Models* - http://www.aclweb.org/anthology/P16-1186 - Take-home message: Providing a systematic comparison between various methods for speeding up training neural language models with large vocabulary. Hierarchical softmax works best for large dataset (very surprising), differentied softmax works well for small-scale dataset (but the speed up factor is not so high). NCE works very bad, and Self-normalization works OK. Good notes on the paper can be also found here https://github.com/dennybritz/deeplearning-papernotes/blob/master/notes/strategies-for-training-large-vocab-lm.md
 - *See, hear, and read: deep aligned representations* - https://arxiv.org/abs/1706.00932: The paper proposes a nice *Cross-Modal Networks* to approach the challenge of learning discriminative representations shared across modalities. Given inputs as different types (image, sound, text), the model produces a *common representation* shared across modalilities. The
