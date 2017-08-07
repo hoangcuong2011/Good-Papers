@@ -78,4 +78,12 @@ In this way q'(theta^) = 0. Therefore,
 
     q(theta) \approx q(theta^) + 1/2 (theta-theta^)^2 q''(theta^)
     
- To be continued ....
+Recall that the probability density of the normal distribution is:
+
+    f(x) = 1/sqrt{2 pi delta^2} e ^-{1/2 delta^2 (x-mu)^2}
+
+If delta = 1, we have:
+
+    f(x) = 1/sqrt{2 pi} e ^-{1/2 (x-mu)^2}
+    
+ 
