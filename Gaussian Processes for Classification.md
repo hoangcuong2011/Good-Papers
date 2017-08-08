@@ -2,7 +2,7 @@
 
 Gaussian Processes are pretty powerful models for regression. Yet it is not quite straightfoward to extend the models to work
 with classification. I found this chapter is not easy to understand, but I learnt quite a lot from it. I will try to
-summarize its most crucial points here.
+summarize its most crucial points regarding to the intuition here.
 
 Let us turn our attention to binary classification: we need to classify each new input to +1 or -1. 
 The straightforward way is to perform regression where the output values is +1 or -1. Specifically, given an input x, we can assume
@@ -50,3 +50,5 @@ The challenge now is finding f^. This is indeed not trivial at all. See the chap
 P(y* = 1|x, y, x*) is also very challenging to compute because prior(f*) is not a Gaussian distribution. The first step to address the problem is to decompose P(y* = 1|x, y, x*) into two components as follows:
 
     P(y* = 1|x, y, x*) = \integral_{}^{}df* P(y*=1| f*)P(f*|x, y, x*)
+
+Even with that, it is still not trivial at all to compute P(y* = 1|x, y, x*). If  P(y*=1| f*) is a probit distribution, the integral can be solved analytically. If we use sigmoid, perhaps sampling is the only option.
