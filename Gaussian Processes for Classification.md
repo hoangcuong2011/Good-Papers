@@ -36,7 +36,7 @@ Here prior(f*) is the value of squashing the output onto [0, 1].
 
 It is not trivial at all to compute P(f*|x, y, x*) (because p(f|x, y) is not a Gaussian distribution, i.e. y is only +1, -1 and therefore it is not the case) and P(y* = 1|x, y, x*) (because prior(f*) is not a Gaussian distribution).
 
-**How to compute P(f*|x, y, x*)**
+** How to compute P(f*|x, y, x*) **
 
 The perhaps only way to address the problem is using approximation. We first focus on computing P(f*|x, y, x*), which is difficult because of p(f|x, y). We can easy the difficulty if p(f|x, y) is approximated by a normal distribution, so that the integral can be intractable to compute (see this https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md). Laplace's method comes into place now (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md). This sounds straightfoward, right? Actually it is not as I will show you. If we *blindedly" apply Laplace's method, let us assume f^ as the solution of
 
@@ -76,7 +76,7 @@ The last is about finding f^. This is indeed not trivial at all. We know that (l
     
 To solve this problem, we can use Newton method. I haven't had any experience with using Newton method for this problem, though! As you can see, everything is fully non-trivial!
 
-**How to compute P(y* = 1|x, y, x*)**
+** How to compute P(y* = 1|x, y, x*) **
 
 P(y* = 1|x, y, x*) is also very challenging to compute because prior(f*) is not a Gaussian distribution. The first step to address the problem is to decompose P(y* = 1|x, y, x*) into two components as follows:
 
