@@ -1,8 +1,12 @@
-- Gaussian CheatSheet
+**Gaussian CheatSheet**
 
 Gaussian distribution has a lot of beautiful formula that we might encounter them in various cases. Here I show some of them.
 
-1. *Gaussian Indentities* (For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - page 124)
+1. *Gaussian Indentities* 
+
+(For reference see this http://www.gatsby.ucl.ac.uk/~snelson/thesis.pdf - page 124)
+
+
 Let us assume we have a Gaussian distribution on a vector y:
     Y samples from N(mean U*f, covariance A)
     
@@ -35,7 +39,9 @@ as:
 
 How beautiful it is!
 
-2. *Conditioning Gaussian* (For reference see this http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf)
+2. *Conditioning Gaussian* 
+
+(For reference see this http://cs229.stanford.edu/section/cs229-gaussian_processes.pdf)
 
 Let us assume 
 
@@ -64,7 +70,9 @@ The conditional densities are as follows:
     
 In Gaussian Processes, we perform prediction per each new test case using this formula.
 
-3. Gaussian integral
+3. *Gaussian integral*
+
+
 The Gaussian integral is encountered very often in practice. The formulas are as follows:
 
     integral_{-infinity}^{infinity}dx exp{-x^2}  = sqrt{\pi}
@@ -73,7 +81,9 @@ The Gaussian integral is encountered very often in practice. The formulas are as
     
 How beautiful it is!
 
-4. Laplace’s technique: normal approximation to posterior (see reference: http://www2.stat.duke.edu/~st118/sta250/laplace.pdf and http://www.cedar.buffalo.edu/~srihari/CSE574/Chap4/Chap4-Part4.pdf)
+4. *Laplace’s technique: normal approximation to posterior*
+
+(see reference: http://www2.stat.duke.edu/~st118/sta250/laplace.pdf and http://www.cedar.buffalo.edu/~srihari/CSE574/Chap4/Chap4-Part4.pdf)
 
 Let us assume a model q(theta). Doing a second order Taylor expansion of q(theta) gives us:
 
