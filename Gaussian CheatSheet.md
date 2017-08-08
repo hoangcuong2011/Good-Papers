@@ -64,7 +64,16 @@ The conditional densities are as follows:
     
 In Gaussian Processes, we perform prediction per each new test case using this formula.
 
-3. Laplace’s technique: normal approximation to posterior (see reference: http://www2.stat.duke.edu/~st118/sta250/laplace.pdf and http://www.math.tut.fi/~piche/bayes/notes08.pdf)
+3. Gaussian integral
+The Gaussian integral is encountered very often in practice. The formulas are as follows:
+
+    integral_{-infinity}^{infinity}dx exp{-x^2}  = sqrt{\pi}
+    integral_{-infinity}^{infinity}dx exp{-ax^2} = sqrt{\pi/a}
+    integral_{-infinity}^{infinity}dx exp{-a(x+b)^2} = sqrt{\pi/a}
+    
+How beautiful it is!
+
+4. Laplace’s technique: normal approximation to posterior (see reference: http://www2.stat.duke.edu/~st118/sta250/laplace.pdf and http://www.cedar.buffalo.edu/~srihari/CSE574/Chap4/Chap4-Part4.pdf)
 
 Let us assume a model q(theta). Doing a second order Taylor expansion of q(theta) gives us:
 
@@ -74,16 +83,28 @@ Let us choose theta^ as follows
     
     theta^ = argmax_{theta} q(theta)
     
-In this way q'(theta^) = 0. Therefore,
+In this way q'(theta^) = 0 and q''(theta^) < 0. Therefore,
 
     q(theta) \approx q(theta^) + 1/2 (theta-theta^)^2 q''(theta^)
     
-Recall that the probability density of the normal distribution is:
+Instead of working with q(theta), it is very useful to work with ln q(theta) instead:
 
-    f(x) = 1/sqrt{2 pi delta^2} e ^-{1/2 delta^2 (x-mu)^2}
 
-If delta = 1, we have:
+    ln q(theta) \approx ln q(theta^) + 1/2 (theta-theta^)^2 (ln q(theta^))''
+    q(theta) \approx q(theta) exp{ (theta-theta^)^2 (ln q(theta^))''/2 }
+    or q(theta) \approx q(theta^) exp{ - (theta-theta^)^2 -(ln q(theta^))''/2 }
 
-    f(x) = 1/sqrt{2 pi} e ^-{1/2 (x-mu)^2}
+Once q(theta) is approximated using Laplace's technique, the normalized version of q(theta)  has a beautiful form. In detail, 
+
+    \integral dtheta q(theta) \approx integral_{-infinity}^{infinity} dtheta q(theta^) exp{ - (theta-theta^)^2 -(ln q(theta^))''/2 }
+
+Recall that 
+
+    integral_{-infinity}^{infinity}dx exp{-ax^2}  = sqrt{\pi/a}
     
- 
+Then 
+
+    \integral dtheta q(theta) \approx q(theta^) \sqrt{2\pi/-(ln q(theta^))'' } } = Z
+
+ Then 
+    q(theta)/Z \approximate N(theta|theta^, 1/-(ln q(theta^))'')
