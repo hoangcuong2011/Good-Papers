@@ -106,7 +106,7 @@ Instead of working with q(theta), it is very useful to work with ln q(theta) ins
 
 Once q(theta) is approximated using Laplace's technique, the normalized version of q(theta)  has a beautiful form. In detail, 
 
-    \integral dtheta q(theta) \approx integral_{-infinity}^{infinity} dtheta q(theta^) exp{ - (theta-theta^)^2 -(ln q(theta^))''/2 }
+    \integral dtheta q(theta) \approx integral dtheta q(theta^) exp{ - (theta-theta^)^2 -(ln q(theta^))''/2 }
 
 Recall that 
 
