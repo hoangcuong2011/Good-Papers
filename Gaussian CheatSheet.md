@@ -106,5 +106,7 @@ Then
 
     \integral dtheta q(theta) \approx q(theta^) \sqrt{2\pi/-(ln q(theta^))'' } } = Z
 
- Then 
-    q(theta)/Z \approximate N(theta|theta^, 1/-(ln q(theta^))'')
+As the normalizing constant has a tractable (and beautiful) form, we can the normalized version of q(theta) as follows:
+    
+     q(theta)/Z \approximate N(theta|theta^, 1/-(ln q(theta^))'')
+     
