@@ -42,7 +42,7 @@ The perhaps only way to address the problem is using approximation. We first foc
    
 Using Laplace's method, 
 
-    p(f|x, y) \approximate N(f|f^, A^-1) where A s the negative second order derivative of ln p(f|x, y) at f^.
+    p(f|x, y) \approx N(f|f^, A^-1) where A s the negative second order derivative of ln p(f|x, y) at f^.
 
 The challenge now is finding f^. This is indeed not trivial at all. See the chapter for a reference. The method in the chapter only works with some nice squashing form (i.e. sigmoid and probit only), though.
 
