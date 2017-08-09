@@ -34,15 +34,17 @@ Second we need to compute this function
     
 Here prior(f*) is the value of squashing the output onto [0, 1]. 
 
-It is not trivial at all to compute P(f*|x, y, x*) (because p(f|x, y) is not a Gaussian distribution, i.e. y is only +1, -1 and therefore it is not the case) and P(y* = 1|x, y, x*) (because prior(f*) is not a Gaussian distribution).
+It is not trivial at all to compute P(f*|x, y, x*) (note p(f|x, y) is not a Gaussian distribution, i.e. y is only +1, -1 and therefore it is not the case) and P(y* = 1|x, y, x*) (note prior(f*) is not a Gaussian distribution).
 
 **How to compute P(f*|x, y, x*) **
 
-The perhaps only way to address the problem is using approximation. We first focus on computing P(f*|x, y, x*), which is difficult because of p(f|x, y). We can ease the difficulty if p(f|x, y) is approximated by a normal distribution, so that the integral can be intractable to compute (see Gaussian identities property from the link https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md). 
+We first focus on computing P(f*|x, y, x*). The simplest approach is to use sampling (e.g. MCMC). This approach is extremely espensive, though. The another approach, which I found very smart is to approximate p(f|x, y) using a normal distribution.
+The key insight here is that such an approximation "implies a Gaussian Process approximation to the posterior process, which gives rise to an approximate P(f*|x, y, x*)" (see these two papers for a reference: Assessing Approximations for Gaussian Process Classification (http://papers.nips.cc/paper/2903-assessing-approximations-for-gaussian-process-classification.pdf) and its longer version Assessing Approximate Inference for Binary Gaussian Process Classification (http://www.jmlr.org/papers/volume6/kuss05a/kuss05a.pdf)). But how to approximate p(f|x, y)? Laplace's method comes into place now (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md).
+Expectation Propagation can also be a solution. 
 
 1. Laplace's method
 
-Laplace's method comes into place now (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md). This sounds straightfoward, right? Actually it is not as I will show you. If we *blindedly" apply Laplace's method, let us assume f^ as the solution of
+Even if you know Laplace's method, I don't think it is straigtforward to apply it here. If we *blindedly" apply Laplace's method, let us assume f^ as the solution of
 
     f^ = argmax_f p(f|x, y)
    
@@ -87,3 +89,6 @@ P(y* = 1|x, y, x*) is also very challenging to compute because prior(f*) is not 
     P(y* = 1|x, y, x*) = \integral_{}^{}df* P(y*=1| f*)P(f*|x, y, x*)
 
 Even with that, it is still not trivial at all to compute P(y* = 1|x, y, x*). If  P(y*=1| f*) is a probit distribution, the integral can be solved analytically. If we use sigmoid, perhaps sampling is the only option.
+
+
+---- to be continued ------
