@@ -14,7 +14,7 @@ It means that what we need to do is to construct a Gaussian distribution in whic
 this is a right approach to do.
 
 We can also perform regression where the ouput values is P(y=1|x) or P(Y=-1|x) instead. I don't know whether it is a right approach to
-try, but we at least stuck with the problem of constructing a Gaussian distribution that generating data is within range 0 and 1.Even if we can do that, I don't see how we can train such a model?
+try, but we at least stuck with the problem of constructing a Gaussian distribution that generating data is within range 0 and 1. Even if we can do that, I don't see how we can train such a model?
 
 Okay in practice those are not the approaches people try. Here is the best way to date, which involves two steps:
 
@@ -36,9 +36,13 @@ Here prior(f*) is the value of squashing the output onto [0, 1].
 
 It is not trivial at all to compute P(f*|x, y, x*) (because p(f|x, y) is not a Gaussian distribution, i.e. y is only +1, -1 and therefore it is not the case) and P(y* = 1|x, y, x*) (because prior(f*) is not a Gaussian distribution).
 
-**How to compute P(f*|x, y, x*)**
+**How to compute P(f*|x, y, x*) **
 
-The perhaps only way to address the problem is using approximation. We first focus on computing P(f*|x, y, x*), which is difficult because of p(f|x, y). We can easy the difficulty if p(f|x, y) is approximated by a normal distribution, so that the integral can be intractable to compute (see this https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md). Laplace's method comes into place now (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md). This sounds straightfoward, right? Actually it is not as I will show you. If we *blindedly" apply Laplace's method, let us assume f^ as the solution of
+The perhaps only way to address the problem is using approximation. We first focus on computing P(f*|x, y, x*), which is difficult because of p(f|x, y). We can ease the difficulty if p(f|x, y) is approximated by a normal distribution, so that the integral can be intractable to compute (see Gaussian identities property from the link https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md). 
+
+1. Laplace's method
+
+Laplace's method comes into place now (see this for an introduction https://github.com/hoangcuong2011/Good-Papers/blob/master/Gaussian%20CheatSheet.md). This sounds straightfoward, right? Actually it is not as I will show you. If we *blindedly" apply Laplace's method, let us assume f^ as the solution of
 
     f^ = argmax_f p(f|x, y)
    
