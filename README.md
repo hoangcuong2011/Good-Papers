@@ -3,6 +3,7 @@
 - Gaussian CheatSheet
 
 **Topics with detailed notes**
+- *Expectation Propagation*
 - *Gaussian processes*
 - *Gaussian Processes with Notes*
 
