@@ -26,7 +26,7 @@ Unfortunately, it seems like doing so does not help improve DA. The remarkably t
 Overall I think this is a nice work to know, even though I have several questions:
 
 - It is not clear to me how the model can be trained end-to-end? I am gonna digging in this.
-- It is still not clear to me how GPs should be a must to be putted on top of a DNN (I need more time to think about this carefully). Meanwhile it is pretty clear that DNN really helps GPs.
+- It is still not clear to me it should be a must to put GPs on top of a DNN (I need more time to think about this carefully). Meanwhile it is pretty clear that DNN really helps GPs.
 
 
 
