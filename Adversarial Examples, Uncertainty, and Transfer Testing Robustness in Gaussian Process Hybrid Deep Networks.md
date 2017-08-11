@@ -21,13 +21,14 @@ It seems doing so quite helpful.
 - **Domain Adaptation**
 
 I like the experiments: they train different models on MNIST, and test on completely different datasets.
-Unfortunately, it seems like doing so does not help improve DA. The remarkably thing is that the log likelihood of the DNN-GP model is close to log (0.1) (a uniform predictor on a ten classs problem) for hard cases, while a DNN cannot provide this thing. I found this interesting but I need more time to digest this.
+Unfortunately, it seems like doing so does not help improve DA. The remarkable thing is that the log likelihood of the DNN-GP model is close to log (0.1) (a uniform predictor on a ten classs problem) for hard cases, while a DNN cannot provide this thing. I found this interesting but I need more time to digest this.
 
 Overall I think this is a nice work to know, even though I have several questions:
 
 - It is not clear to me how the model can be trained end-to-end? I am gonna digging in this.
 - It is still not clear to me it should be a must to put GPs on top of a DNN (I need more time to think about this carefully). Meanwhile it is pretty clear that DNN really helps GPs.
-
+- I thought Deep Gaussian Processes are an alternative to DNN, but it seems like this is not the case, at least regarding to 
+classification problem.
 
 
 
