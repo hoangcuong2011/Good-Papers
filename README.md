@@ -9,6 +9,7 @@
 
 
 **Papers with detailed notes**
+- *Adversarial Examples, Uncertainty, and Transfer Testing Robustness in Gaussian Process Hybrid Deep Networks* - https://arxiv.org/pdf/1707.02476.pdf
 - *Gaussian Processes for Classification* - Chapter 3 of the book Gaussian Processes for Machine Learning http://www.gaussianprocess.org/gpml/chapters/RW3.pdf
 - *Sparse Gaussian Processes using Pseudo-inputs* - https://papers.nips.cc/paper/2857-sparse-gaussian-processes-using-pseudo-inputs
 - *Multi-task Sequence to Sequence Learning* - https://arxiv.org/abs/1511.06114
