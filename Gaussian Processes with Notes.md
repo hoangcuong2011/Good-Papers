@@ -2,7 +2,7 @@
 
 Gaussian Processes are pretty models. In this article I refer several important claims:
 
-**Short claims**
+**Short notes**
 - GPs are limited in their ability to learn non-stationary functions (e.g., a function with sudden jumps). http://www2.ift.ulaval.ca/~chaib/publications/Yali-AISTAS16.pdf (the best explanation of non-stationary functions I ever seen) 
 - A GP is an MLP with infinite units in the hidden layer, source: Neal 1996
 - Gaussian processes provide flexible, non-parametric, probabilistic approaches to function estimation. However, their tractability comes at a price: they can only represent a restricted class of
@@ -13,8 +13,11 @@ employs process composition (Lawrence & Moore, 2007; Damianou et al., 2011; Láz
 
 
 -----------------------------------------------------------------------------
-**Longer claims**
+**Longer notes**
 
+- Depending on kernel function, GP Regression is equivalent to: Linear Regression, Polynomial Regression, Splines,  Kalman Filters, Generalized Additive Models. We can use gradients of model evidence to learn which model best explains the data; no need for cross-validation!!!
+
+source: https://www.cs.toronto.edu/~duvenaud/papers/uw_additive_gp_slides.pdf
 
 - Useful properties of Gaussian processes, source: https://www.cs.toronto.edu/~duvenaud/thesis.pdf
 
