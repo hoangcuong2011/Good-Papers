@@ -15,7 +15,19 @@ employs process composition (Lawrence & Moore, 2007; Damianou et al., 2011; Láz
 -----------------------------------------------------------------------------
 **Longer notes**
 
-- Depending on kernel function, GP Regression is equivalent to: Linear Regression, Polynomial Regression, Splines,  Kalman Filters, Generalized Additive Models. We can use gradients of model evidence to learn which model best explains the data; no need for cross-validation!!!
+- Depending on kernel function, GP Regression is equivalent to: 
+
+**Linear Regression**, 
+
+**Polynomial Regression**, 
+
+**Splines**,
+
+**Kalman Filters**,
+
+**Generalized Additive Models**. 
+
+We can use gradients of model evidence to learn which model best explains the data; no need for cross-validation!!!
 
 source: https://www.cs.toronto.edu/~duvenaud/papers/uw_additive_gp_slides.pdf
 
