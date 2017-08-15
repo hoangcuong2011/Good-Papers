@@ -3,7 +3,7 @@
 A very beautiful paper to read! The thing GPs are excellent at is regression. Yet it is still difficult
 to discover patterns and do extrapolation with standard kernels such as RBF. Those are simply not expressive enough!
 
-The paper proposes a new one that kernel type that helps do so, while inference remains simple and analytic. Experiments described in
+The paper proposes a new kernel type that helps do so, while inference remains simple and analytic. Experiments described in
 section 4.4 say everything: the new one can learn very complex oscillatory pattern while others cannot. How is that possible?
 
 
