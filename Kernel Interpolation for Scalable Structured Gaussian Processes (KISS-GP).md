@@ -24,12 +24,17 @@ for a set of m inducing points U. The inversion of K_{U, U} takes O(m^3) which i
 But if we assume inducing points are multidimensional inputs on a Cartesian grid, the problem can be fixed. But one thing I don't get
 from the paper is how to put that grid constraist to the selection of pseudo inputs, though.
 
-The another problem now is to ease the dominant O(m^2n) computations that are associated with K_{x, U}. The key idea is to perform
-approximation: let us assume we need to estimate k(x_i, u_j), we then find two pseudo points in U (let's say u_a and u_b) that are closest to x_i. We
+The another problem now is to ease the dominant O(m^2n) computations that are associated with K_{x, U}. The key idea is to perform approximation: let us assume we need to estimate k(x_i, u_j), we then find two pseudo points in U (let's say u_a and u_b) that are closest to x_i. We
 can then form:
 
 k(x_i, uj) = w_i k(u_a, u_j) + (1-w_i) k(u_b, u_j)
 
 In this end, we form K_{x, U} = W K_{U, U}
 
-Here, W is a very sparse matrix. I am not so sure how to create such a matrix, though. It is pretty unclear in the paper.
+Here, W is a very sparse n * m matrix. I am not so sure how to create such a matrix, though. It is pretty unclear in the paper. I guess for every point x_j, it took us O(log m) to determine two relevant pseudo inputs u_a and u_b. Hence creating
+such a matrix costs O(n log m)???
+
+It is, still not so clear to me how it costs O(n+m^2) computatoins an storage, though.
+
+
+------- to be continued ----------------------
