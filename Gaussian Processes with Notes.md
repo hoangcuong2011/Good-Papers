@@ -14,20 +14,10 @@ employs process composition (Lawrence & Moore, 2007; Damianou et al., 2011; Láz
 
 -----------------------------------------------------------------------------
 **Longer notes**
+- However, Bayesian nonparametrics can help build automated intelligent systems that reason and make decisions. it has been suggested that the human ability for inductive reasoning - concept generalizatoin with remarkbly few examples - could derive from a prior combined with Bayesian inference. Bayesian nonparametric models and Gaussian processes in particular, are an expressive way to encode prior knowledge and also reflect the belief that the real world is infinitely complex.
 
-- Depending on kernel function, GP Regression is equivalent to: 
 
-**Linear Regression**, 
-
-**Polynomial Regression**, 
-
-**Splines**,
-
-**Kalman Filters**,
-
-**Generalized Additive Models**. 
-
-We can use gradients of model evidence to learn which model best explains the data; no need for cross-validation!!!
+- Depending on kernel function, GP Regression is equivalent to: Linear Regression, Polynomial Regression, Splines, Kalman Filters, Generalized Additive Models. We can use gradients of model evidence to learn which model best explains the data; no need for cross-validation!!!
 
 source: https://www.cs.toronto.edu/~duvenaud/papers/uw_additive_gp_slides.pdf
 
