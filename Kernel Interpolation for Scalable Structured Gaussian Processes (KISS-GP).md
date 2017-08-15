@@ -34,7 +34,7 @@ In this end, we form K_{x, U} = W K_{U, U}
 Here, W is a very sparse n * m matrix. I am not so sure how to create such a matrix, though. It is pretty unclear in the paper. I guess for every point x_j, it took us O(log m) to determine two relevant pseudo inputs u_a and u_b. Hence creating
 such a matrix costs O(n log m)???
 
-It is, still not so clear to me how it costs O(n+m^2) computatoins an storage, though.
+It is, still not so clear to me how it costs O(n+m^2) computations and storage, though.
 
 
 ------- to be continued ----------------------
