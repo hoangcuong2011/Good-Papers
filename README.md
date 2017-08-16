@@ -9,6 +9,7 @@
 
 
 **Papers with detailed notes**
+- *Additive Gaussian Processes* - http://hannes.nickisch.org/papers/conferences/duvenaud11gpadditive.pdf
 - *Kernel Interpolation for Scalable Structured Gaussian Processes (KISS-GP)* - http://proceedings.mlr.press/v37/wilson15.pdf
 - *Gaussian Process Kernels for Pattern Discovery and Extrapolation* - https://arxiv.org/abs/1302.4245
 - *Adversarial Examples, Uncertainty, and Transfer Testing Robustness in Gaussian Process Hybrid Deep Networks* - https://arxiv.org/pdf/1707.02476.pdf
