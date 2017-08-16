@@ -17,7 +17,7 @@ it is not at all. Let me explain in detail how they implement the idea.
 
 First, recall that inducing point methods use an alternative kernel:
 
-  K_{x, U} K_{U, U}^-1 K_{U, x}
+    K_{x, U} K_{U, U}^-1 K_{U, x}
 
 for a set of m inducing points (a.k.a. pseudo inputs) U. The inversion of K_{U, U} takes O(m^3) which is very expensive. 
 
@@ -29,7 +29,7 @@ straightforward to me.
 The another problem now is to try to ease the dominant O(m^2n) computations that are associated with K_{x, U}. The key idea is to perform approximation: let us assume we need to estimate k(x_i, u_j), we then find two pseudo points in U (let's say u_a and u_b) that are closest to x_i. We
 can then form:
 
-  k(x_i, uj) = w_i k(u_a, u_j) + (1-w_i) k(u_b, u_j)
+    k(x_i, uj) = w_i k(u_a, u_j) + (1-w_i) k(u_b, u_j)
 
 In this end, we form K_{x, U} = W K_{U, U}
 
