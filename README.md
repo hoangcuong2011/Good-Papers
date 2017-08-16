@@ -9,6 +9,7 @@
 
 
 **Papers with detailed notes**
+- *The Human Kernel* - http://papers.nips.cc/paper/5765-the-human-kernel
 - *Additive Gaussian Processes* - http://hannes.nickisch.org/papers/conferences/duvenaud11gpadditive.pdf
 - *Kernel Interpolation for Scalable Structured Gaussian Processes (KISS-GP)* - http://proceedings.mlr.press/v37/wilson15.pdf
 - *Gaussian Process Kernels for Pattern Discovery and Extrapolation* - https://arxiv.org/abs/1302.4245
