@@ -15,20 +15,20 @@ try two different way to learn the parameters:
 
 1. maximizing the marginal likelihood of the training data (note that we only have a set of training data, so let us
 call the data as a single "realisation").
-2. maximixing the marignal likelihood of the human-extrapolation-annotated data. Note that there are multiple people who did
-the job, and the authors assume the prediction data from each person is sampled from a distribution. This is fundamentally different to the first approach regarding to the training philosophy. Yet regarding to the training technique it is quite straightforward: the marginal likelihood of the data is simply a product of the marginal likelihood of prediction data from each person.
+2. maximixing the marginal likelihood of the human-extrapolation-annotated data. Note that there are multiple people who did
+the job, and the authors assume their prediction data (from each person) is sampled from a certain distribution. This is fundamentally different to the first approach regarding to the training philosophy. Yet regarding to the training technique it is quite straightforward: the marginal likelihood of the data is simply a product of the marginal likelihood of prediction data from each person.
 
 What the authors learnt from their experiments is that:
 
 - (2) is extremely helpful. (1) is quite inaccurate. This is what Figure 1 is all about. This is also what Firgure 3 o and 3p are about. This raises to me an interesting question: Should I split the training data to multiple subsets and learn model parameters under these multiple realisations?
 
-- Humans have a strong prior bias for smooth functions (i.e. heavy-tailed correlation). I believe this is what Figure 2(g) is about, even I am not 100% sure.
+- Humans have a strong prior bias for smooth functions (i.e. heavy-tailed correlation). I believe this is what Figure 2(g) is about. But I might be wrong.
 
 - RBF is very inaccurate. We should use a GP with a spectral mixture kernel, even though such a model is far from perfect.
 
 
 The next bunch of experiments are about Human Occam's razor. Several conclusions are made from experiments:
 
-- Maximixing marginal likelihood of training data causes underfitting. I found this really surprising. Should we penalize harder the complexty terms in the formula??? I think we should do so to learn a more accurate parameters. But I am not so sure why the authors do not state that explicitly.
+- Maximixing marginal likelihood of training data causes underfitting. I found this really surprising. Should we penalize harder the complexty terms in the formula??? I think we should do so to learn more accurate parameters. But I am not so sure why the authors do not state that explicitly.
 
 - Even more surprising, humans prefer an even much simpler solution. As a side note, humans agree with the GP marignal likelihood about the best fit.
