@@ -1,6 +1,8 @@
 # Some good papers I like
 **Basic Background**
 - Gaussian CheatSheet
+- Kronecker-Factored Approximations (TODO list)
+- Asynchronous stochastic gradient descent  (TODO list)
 
 **Topics with detailed notes**
 - *Expectation Propagation*
