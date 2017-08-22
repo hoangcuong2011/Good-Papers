@@ -2,7 +2,7 @@
 **Basic Background**
 - Gaussian CheatSheet
 - Kronecker-Factored Approximations (TODO list)
-- Asynchronous stochastic gradient descent  (TODO list)
+- Asynchronous stochastic gradient descent
 
 **Topics with detailed notes**
 - *Expectation Propagation*
