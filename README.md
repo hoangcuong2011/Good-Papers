@@ -11,6 +11,7 @@
 
 
 **Papers with detailed notes**
+- Stochastic Variational Deep Kernel Learning (i.e. *Deep Kernel Learning for Multi-task Classification*) - https://arxiv.org/pdf/1611.00336.pdf
 - *The Human Kernel* - http://papers.nips.cc/paper/5765-the-human-kernel
 - *Additive Gaussian Processes* - http://hannes.nickisch.org/papers/conferences/duvenaud11gpadditive.pdf
 - *Kernel Interpolation for Scalable Structured Gaussian Processes (KISS-GP)* - http://proceedings.mlr.press/v37/wilson15.pdf
