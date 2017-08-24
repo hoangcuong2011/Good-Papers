@@ -1,6 +1,6 @@
-- Gaussian Processes with Notes
+- Machine Learning with good Notes
 
-Gaussian Processes are pretty models. In this article I refer several important claims:
+In this article I refer several good claims I like:
 
 **Short notes**
 - GPs are limited in their ability to learn non-stationary functions (e.g., a function with sudden jumps). http://www2.ift.ulaval.ca/~chaib/publications/Yali-AISTAS16.pdf (the best explanation of non-stationary functions I ever seen) 
@@ -10,6 +10,7 @@ functions. Indeed, even though sophisticated definitions and combinations of cov
 2013; Duvenaud et al., 2013; Wilson & Adams, 2013), the assumption about joint normal distribution of instantiations of the latent function remains; this limits the applicability of the models. One
 line of recent research to address this limitation focused on function composition (Snelson et al., 2004; Calandra et al., 2014). Inspired by deep neural networks, a deep Gaussian process instead
 employs process composition (Lawrence & Moore, 2007; Damianou et al., 2011; Lázaro-Gredilla, 2012; Damianou & Lawrence, 2013; Hensman & Lawrence, 2014), source: https://arxiv.org/abs/1511.06455
+- Classification via regression: Given the dissociation between the objective (classification) and the estimation criterion (regression) it is not clear that this approach leads to sensible results, source: http://www.ai.mit.edu/courses/6.867-f04/lectures/lecture-5-ho.pdf
 
 
 -----------------------------------------------------------------------------
