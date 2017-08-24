@@ -1,0 +1,1 @@
+- Stochastic Variational Deep Kernel Learning (i.e. *Deep Kernel Learning for Multi-task Classification*) - https://arxiv.org/pdf/1611.00336.pdf
