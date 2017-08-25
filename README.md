@@ -1,5 +1,6 @@
 # Some good papers I like
 **Basic Background**
+- Gradient regarding to algebra (TODO list)
 - Gaussian CheatSheet
 - Kronecker-Factored Approximations (TODO list)
 - Asynchronous stochastic gradient descent
