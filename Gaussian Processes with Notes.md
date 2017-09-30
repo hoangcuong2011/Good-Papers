@@ -26,6 +26,15 @@ source: https://arxiv.org/abs/1302.4245
 
 source: https://www.cs.toronto.edu/~duvenaud/papers/uw_additive_gp_slides.pdf
 
+- I would add the following to David Warde-Farley's excellent answers. 
+
+An advantage of Gaussian Processes is that, like other kernel methods, they can be optimized exactly, given the values of their hyper-parameters (such as the weight decay and the spread of a Gaussian kernel), and this often allows a fine and precise trade-off between fitting the data and smoothing. On small datasets they are very good because of this well-tuned smoothing and because they are still computationally affordable. They are my method of choice for small regression datasets (less than 1000 or 2000 examples). 
+
+On the other hand, if you want to capture a complicated function (with many many ups and downs, i.e., not necessarily very smooth), then you need a model that can scale to large datasets and that can generalize non-locally (which kernel machines with standard generic kernels, typically local, do not provide). Modern variants of neural networks (so-called Deep Learning, Deep Learning) are more attractive with respect to these two properties, so I would prefer them for larger datasets where there is a lot of structure to be extracted from the data (the target function is not smooth).
+
+source: https://www.quora.com/What-are-some-advantages-of-using-Gaussian-Process-Models-vs-Neural-Networks
+
+
 - Useful properties of Gaussian processes, source: https://www.cs.toronto.edu/~duvenaud/thesis.pdf
 
 **Analytic inference**. Given a kernel function and some observations, the predictive posterior distribution can be computed exactly in closed form. This is a rare property for nonparametric models to have.
