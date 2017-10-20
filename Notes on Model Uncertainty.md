@@ -11,3 +11,8 @@ Notes on Model Uncertainty (Regarding to Bayesian Deep Learning)
 5. "typical training of neural networks requires lots of labeled data to control the risk of overfitting. And the problem becomes harder when it comes to real world regression tasks. These tasks often have smaller training data to use, and the high-frequency characteristics of these data often makes neural networks easier to get trapped in overfitting." http://zhusuan.readthedocs.io/en/latest/bayesian_nn.html
 
 6. "In BNN, the approximate distribution is usually further simplified by factorizing it into independent distributions for each weight layers (mean field approximation). This approximation creates larger bias and can be problematic in the deep neural network." https://becominghuman.ai/learning-note-dropout-in-recurrent-networks-part-1-57a9c19a2307
+
+7. "Uncertainty in predictions: As we will see below, the Bayesian Neural Network informs us about the uncertainty in its predictions. I think uncertainty is an underappreciated concept in Machine Learning as it’s clearly important for real-world applications. But it could also be useful in training. For example, we could train the model specifically on samples it is most uncertain about" - http://docs.pymc.io/notebooks/bayesian_neural_network_advi.html
+
+8. "Training neural networks has a general problem that the parameters can be stuck in a local minimum, which limits the model performance. Therefore, in the training process, we hope the model parameters have the ability to jump out of the local minimum area when stuck at it and search in a bigger space to find the global minimum" - http://zhusuan.readthedocs.io/en/latest/bayesian_nn.html
+
