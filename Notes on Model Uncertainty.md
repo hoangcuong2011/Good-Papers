@@ -16,3 +16,4 @@ Notes on Model Uncertainty (Regarding to Bayesian Deep Learning)
 
 8. "Training neural networks has a general problem that the parameters can be stuck in a local minimum, which limits the model performance. Therefore, in the training process, we hope the model parameters have the ability to jump out of the local minimum area when stuck at it and search in a bigger space to find the global minimum" - http://zhusuan.readthedocs.io/en/latest/bayesian_nn.html
 
+9. "This might seem silly for such a small expression, but one of the key ideas in Tensorflow is deferred execution: it's very cheap to build a large and complex expression, and when you want to evaluate it, the back-end (to which you connect with a Session) is able to schedule its execution more efficiently (e.g. executing independent parts in parallel and using GPUs)." - https://stackoverflow.com/questions/33633370/how-to-print-the-value-of-a-tensor-object-in-tensorflow
