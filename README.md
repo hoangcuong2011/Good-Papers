@@ -51,6 +51,8 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 
 
 **Papers with quick notes**
+- *Deep Neural Networks as Gaussian Processes* - It has been long known how a GP corresponds to a neural network with *single* hidden layer. Yet it is not clear how it is with *deep* neural networks. This work delineates the correspondence between *deep* neural networks and Gaussian Processes. Specificially, the work provides an equation of covariance matrix that corresponds to each non-linear function used in deep neural networks. For RELU, it is easy to compute the equivalent covariance matrix, but for other certain non-linear functions, it seems like it is not trivial to do so. They provide an algorithm to compute covariance matrix, which is quite difficult to follow. Bayesian inference also helps the model learn where it gives good prediction and where it does not. Figure 2 is really impressive/interesting to me.
+Overall I think the paper is very interesting/important.
 
 - *What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?* The paper studies the benefits of modeling uncertainty in Bayesian deep learning models for vision tasks. They define two types of uncertainty: aleatoric uncertainty that captures noise inherent and epistemic uncertaint which accounts for uncertainty in the model. They propose a BNN models that captures all these things, and show how this helps visition tasks. Some of the techniques are too involved too me, but overall I enjoyed reading the paper.
 
