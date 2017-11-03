@@ -12,6 +12,8 @@
 
 
 **Papers with detailed notes**
+
+- Black Box Variational Inference - https://arxiv.org/pdf/1401.0118.pdf
 - Stochastic Variational Deep Kernel Learning (i.e. *Deep Kernel Learning for Multi-task Classification*) - https://arxiv.org/pdf/1611.00336.pdf
 - *The Human Kernel* - http://papers.nips.cc/paper/5765-the-human-kernel
 - *Additive Gaussian Processes* - http://hannes.nickisch.org/papers/conferences/duvenaud11gpadditive.pdf
