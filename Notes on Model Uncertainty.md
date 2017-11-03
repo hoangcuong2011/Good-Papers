@@ -24,3 +24,6 @@ predictive probabilities obtained at the end of the pipeline (the softmax output
 11. "It has long been known that infinitely wide (single hidden layer) NNs with distributions placed over their weights
 converge to Gaussian processes (Neal, 1995; Williams, 1997). This known relation is through a limit argument that
 does not allow us to translate properties from the Gaussian process to finite NNs easily." http://proceedings.mlr.press/v48/gal16.pdf
+
+12. "The most commonly used automatic differentiation packages in machine learning, Theano (Bastien et al., 2012), Torch (Collobert et al., 2002) and TensorFlow(Abadi et al., 2016) require learning a new syntax in which to express operations, each acting as a compiler for a restricted mini-language" https://www.cs.toronto.edu/~duvenaud/papers/blackbox.pdf
+
