@@ -1,4 +1,4 @@
-Notes on Model Uncertainty (Regarding to Bayesian Deep Learning)
+Good Notes on Machine Learning in general
 
 1. Edward = TensorFlow + Random Variables + Inference Algorithms
 
@@ -26,4 +26,7 @@ converge to Gaussian processes (Neal, 1995; Williams, 1997). This known relation
 does not allow us to translate properties from the Gaussian process to finite NNs easily." http://proceedings.mlr.press/v48/gal16.pdf
 
 12. "The most commonly used automatic differentiation packages in machine learning, Theano (Bastien et al., 2012), Torch (Collobert et al., 2002) and TensorFlow(Abadi et al., 2016) require learning a new syntax in which to express operations, each acting as a compiler for a restricted mini-language" https://www.cs.toronto.edu/~duvenaud/papers/blackbox.pdf
+
+13. Typically the kl divergence also lacks a closed form. Instead we maximize the evidence lower bound
+(elbo), a proxy to the kl divergence - https://www.cs.princeton.edu/~rajeshr/papers/KRGB_nips2015.pdf
 
