@@ -10,10 +10,10 @@ This seems impossible, but in fact it is. We indeed can compute noisy unbiased g
 from the variational distribution (Equation 3). Equation 3 does not come intuitively. The proof in the extra materials provide in details
 how we can come up with Eq. 3
 
-While Eq. 3 reveals a door to optimize ELBO much easier, there is still a difficulty with sampling. MC gives us very high variance
+While Eq. 3 reveals a door to optimize ELBO much easier. The optimization only requires computing gradients of the variational approximating family. However, there is still a difficulty with sampling. MC gives us very high variance
 that is "too large too be useful". The authors propose two ways to reduce the problem, with Rao-Blackwellization and smart Control Variates.
 I am aware of those techniques, but not really in-depth though!
 
-
+While the work is very nice, a problem with BBVI is that the variance in sampling still very high! (See this https://arxiv.org/pdf/1603.00788.pdf)
 
 
