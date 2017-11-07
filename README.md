@@ -13,7 +13,7 @@
 
 **Papers with detailed notes**
 
-- Black Box Variational Inference - https://arxiv.org/pdf/1401.0118.pdf
+- Black Box Variational Inference: https://arxiv.org/pdf/1401.0118.pdf
 - Stochastic Variational Deep Kernel Learning (i.e. *Deep Kernel Learning for Multi-task Classification*) - https://arxiv.org/pdf/1611.00336.pdf
 - *The Human Kernel* - http://papers.nips.cc/paper/5765-the-human-kernel
 - *Additive Gaussian Processes* - http://hannes.nickisch.org/papers/conferences/duvenaud11gpadditive.pdf
@@ -48,11 +48,12 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 - *Improving Neural Language Models with a Continuous Cache*: https://openreview.net/pdf?id=B184E5qee
 - *A Clockwork RNN*: http://proceedings.mlr.press/v32/koutnik14.pdf
 - *Variable Computation in Recurrent Neural Networks*: https://arxiv.org/abs/1611.06188
-
+- *Probabilistic Matrix Factorization*: https://www.cs.toronto.edu/~amnih/papers/pmf.pdf
 
 
 
 **Papers with quick notes**
+
 - *The Variational Gaussian Process* (https://arxiv.org/abs/1511.06499) - I don't think I fully understand the idea of using GPs in Variational Inference. But the paper really gives me a better understanding of the general picture of Variational Inference with hierarchical latent variables. That is, having a variational distribution that is also a hierarchical Bayesian model is very difficult to train, and the paper provides a cutting edge method to do so. I recommend readers to take a look at these slides (http://mlg.postech.ac.kr/~readinglist/slides/20160822.pdf). I personally learn a lot from it.
 - *Natural Gradient*  (http://andymiller.github.io/2016/10/02/natural_gradient_bbvi.html): I heard about Natural gradient concept for a while, but I never really captured it until this paper. It is a very beautiful idea and I encourage people to take a look at this tutorial to have a better understanding of the concept!
 - *Progressive growing of GANs for improved quality, stability and variation* (http://research.nvidia.com/sites/default/files/pubs/2017-10_Progressive-Growing-of/karras2017gan-paper.pdf)
