@@ -33,6 +33,6 @@ Overall I like the paper and like their interesting findings. But I think the pa
 
 - I don't think the story written in the paper is really coherent.
 
-- The findings are interesting but a more deeper investigations on why they are the case would satisfy readers more.
+- The findings are interesting but a more deeper investigations on why they are the case would satisfy readers more. So far everything is still as "OK it is very nice to know that!"
 
 
