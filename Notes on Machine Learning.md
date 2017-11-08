@@ -54,3 +54,8 @@ https://arxiv.org/pdf/1511.06499.pdf
 19. Supervised learning models still outperform all unsupervised models. This may be explained because
 "supervised approaches have clear objectives that can be directly optimized". Meanwhile, "unsupervised approaches rely on proxy tasks such as reconstruction, density estimation, or generation, which do not directly encourage useful
 representations for specific tasks." https://arxiv.org/pdf/1704.01444.pdf
+
+20. "We use the customary definition of domain in machine translation: a domain is defined by a corpus from a specific source, and may differ from other domains in topic, genre, style, level of formality, etc" - http://www.aclweb.org/anthology/W/W17/W17-3204.pdf
+
+21. "Note that the output of the NMT system is often quite fluent (e.g., Take heed of your own souls.)
+but completely unrelated to the input, while the SMT output betrays its difficulties with coping with the out-of-domain input by leaving some words untranslated (e.g., Schaue by dich around.). This is of particular concern when MT is used for information gisting — the user will be mislead by hallucinated content in the NMT output." http://www.aclweb.org/anthology/W/W17/W17-3204.pdf
