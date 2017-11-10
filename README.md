@@ -56,6 +56,10 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 
 
 **Papers with quick notes**
+- *Towards Decoding as Continuous Optimisation in Neural Machine Translation* (http://www.aclweb.org/anthology/D17-1014):
+Decoding in NMT is hard regarding to: 1. There is a  potential limit of incorporating additional global features or constraints, and 2. Decoding in left-to-right manner does not use exploited the right context from right-to-left manner.
+The paper addresses the challenge by relaxing this discrete optimisation problem into a continuous optimisation problem. The idea is bold/cool and the authors are the first ones who implement such a thing. A lot of work need to be done to make the model work, including model initialization, learning rate, etc. 
+
 - *Backprop is not just the chain rule* (http://timvieira.github.io/blog/post/2017/08/18/backprop-is-not-just-the-chain-rule/): This article shows a connection between Backpropagation and the Lagrange method. While I am not a realy big fan of philosophical questions, I like the interesting connection, and I think it can be useful to train neural networks with some kinds of constraints.
 
 - *A Continuous Relaxation of Beam Search for End-to-end Training of Neural Sequence Models* (https://arxiv.org/pdf/1708.00111.pdf): A good paper focuses on an interesting problem in seq2seq. Specifically, typical cross entropy training procedures do not directly consider the behaviour of the decoding method. Therefore, beam decoding can be suboptimal when compared with greedy decoding (i.e. beamsize = 1). The work hypothesizes that the under-performance of beam search in certain scenarios can be resolved by using a better designed training objective that directly integrates beam search information (Equation 1). While this is ideal, the new loss function is noncontinous. The solution is relied on Gumbel approximation. The paper shows nice results with their model. It is hard to say whether the technique will be implemented widely (I doubt for a few things, mainly because I was wondering whether Hamming distance is always relevant). However, the paper is definitely an enjoy read.
