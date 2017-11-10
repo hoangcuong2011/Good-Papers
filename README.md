@@ -58,7 +58,9 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 **Papers with quick notes**
 - *Towards Decoding as Continuous Optimisation in Neural Machine Translation* (http://www.aclweb.org/anthology/D17-1014):
 Decoding in NMT is hard regarding to: 1. There is a  potential limit of incorporating additional global features or constraints, and 2. Decoding in left-to-right manner does not use exploited the right context from right-to-left manner.
-The paper addresses the challenge by relaxing this discrete optimisation problem into a continuous optimisation problem. The idea is bold/cool and the authors are the first ones who implement such a thing. A lot of work need to be done to make the model work, including model initialization, learning rate, etc. While the work is definitely good, and the proposed decoding framework is novel, it is unclear to me whether the relaxation is really a right way to solve these above problems?!
+The paper addresses the challenge by relaxing this discrete optimisation problem into a continuous optimisation problem. 
+That is, we can drop the integrality (i.e. one-hot vector) constraint from the predic-
+tion variables and allow them to have soft assignments within the probability simplex. The idea is bold/cool and the authors are the first ones who implement such a thing. A lot of work need to be done to make the model work, including model initialization, learning rate, etc. While the work is definitely good, and the proposed decoding framework is novel, it is unclear to me whether the relaxation is really a right way to solve these above problems?!
 
 - *Backprop is not just the chain rule* (http://timvieira.github.io/blog/post/2017/08/18/backprop-is-not-just-the-chain-rule/): This article shows a connection between Backpropagation and the Lagrange method. While I am not a realy big fan of philosophical questions, I like the interesting connection, and I think it can be useful to train neural networks with some kinds of constraints.
 
