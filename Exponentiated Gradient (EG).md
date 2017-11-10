@@ -29,3 +29,5 @@ The weights of the EG algorithm are positive and sum to 1
 when combined with EG updates (e.g., the convergence proofs in (Beck and Teboulle, 2003) go through with minor modifications; see also
 (Bertsekas, 1999))." (see http://www.cs.columbia.edu/~mcollins/papers/ibm2convex.pdf)
 
+
+- The algorithm has solid theoretical underpinnings! But these things are really hard to follow though (see http://hunch.net/?p=286#comments)
