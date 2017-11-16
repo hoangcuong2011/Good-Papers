@@ -64,4 +64,14 @@ but completely unrelated to the input, while the SMT output betrays its difficul
 
 23. "It has been found that decision trees have the potential advantage of computational scalability, handling data of mixed types, handling missing values, and dealing with irrelevant inputs [34]. However, decision trees has the limitations of low prediction accuracy and high variance [35]." - Twenty Years of Mixture of Experts
 
-24. "Neural networks compute point estimates. Neural networks make overly confident decisions about the correct class, prediction or action. Neural networks are prone to overfitting" - http://rpubs.com/arowan/bayesian_deep_learning
+24. "Neural networks compute point estimates. Neural networks make overly confident decisions about the correct class, prediction or action. Neural networks are prone to overfitting.* -http://rpubs.com/arowan/bayesian_deep_learning
+
+25. "Probabilistic Machine Learning: Aim: Use probability theory to express all forms of uncertainty. Uncertainty estimates needed in forecasting, decision making, learning from limited and noisy data. AI Safety: medicine, engineering, finance, etc.
+The probabilistic approach provides a way to reason about uncertainty and learn from data" -http://rpubs.com/arowan/bayesian_deep_learning 
+
+26. "Bayesian Neural Networks
+A Bayesian neural network is a neural network with a prior distribution on the weights
+- Accounts for uncertainty in weights
+- Propagates this into uncertainty about predictions
+- More robust against overfitting: randomly sampling over network weights as a cheap form of model averaging
+- Can infer network hyperparameters by marginalising them out of the posterior distribution" -http://rpubs.com/arowan/bayesian_deep_learning 
