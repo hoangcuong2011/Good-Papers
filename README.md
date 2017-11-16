@@ -57,6 +57,8 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 
 **Papers with quick notes**
 
+- *Whodunnit? Crime Drama as a Case for Natural Language Understanding* (http://homepages.inf.ed.ac.uk/scohen/tacl17csi.pdf): A fun read. The paper introduces the task of identifying the perpetrator in a crime series as a sequence labeling  problem, and shows how LSTM behaves with an increment process. Three things I learned form the work: LSTM could work well if it has enough data, and it works much better than CRF. LSTM does not give a firm prediction, while the human does (i.e. when human predicts a perpetrator, he/she sticks with that). Finally, LSTM does not have an ability of predicting the case where there is no perpetrator at all (i.e. the victim suicides).
+
 - *Learning bilingual word embeddings with (almost) no bilingual data* (http://www.aclweb.org/anthology/P17-1042): A good work shows how to learn bilingual word embeddings with only around 25 biingual word pairs. It does so with a proposed self-learning approach that develops on previous work, with only a minor yet crucial modification that the learning process repeats over and over again. The authors show very good results with good insights of why such good results are achived. I don't have background of the bilingual word embeddings task, but I think the paper is definitely interesting!
 
 - *Towards Decoding as Continuous Optimisation in Neural Machine Translation* (http://www.aclweb.org/anthology/D17-1014):
