@@ -63,3 +63,5 @@ but completely unrelated to the input, while the SMT output betrays its difficul
 22. "Typical cross entropy training procedures for these models do not directly consider the behaviour of the final decoding method. As a result, for cross-entropy trained models, beam decoding can sometimes yield reduced test performance when compared with greedy decoding. We hypothesize that the under-performance of beam search in certain scenarios can be resolved by using a better designed training objective." - https://arxiv.org/pdf/1708.00111.pdf
 
 23. "It has been found that decision trees have the potential advantage of computational scalability, handling data of mixed types, handling missing values, and dealing with irrelevant inputs [34]. However, decision trees has the limitations of low prediction accuracy and high variance [35]." - Twenty Years of Mixture of Experts
+
+24. "Neural networks compute point estimates. Neural networks make overly confident decisions about the correct class, prediction or action. Neural networks are prone to overfitting" - http://rpubs.com/arowan/bayesian_deep_learning
