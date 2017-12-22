@@ -56,6 +56,7 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 
 
 **Papers with quick notes**
+- *Google Viier: A service for black-box optimization*: The paper presents design of a black-box optimization framework that produces state-of-the-art performance. The framework is an internal service that has become the de factor parameter tuning at Google. I am, however, not sure whether we can try it to do optimization for our own problem. But anyway, it is an interesting paper to know.
 
 - *Whodunnit? Crime Drama as a Case for Natural Language Understanding* (http://homepages.inf.ed.ac.uk/scohen/tacl17csi.pdf): A fun read. The paper introduces the task of identifying the perpetrator in a crime series as a sequence labeling  problem, and shows how LSTM behaves with an increment process. Three things I learned form the work: LSTM could work well if it has enough data, and it works much better than CRF. LSTM does not give a firm prediction, while the human does (i.e. when human predicts a perpetrator, he/she sticks with that). Finally, LSTM does not have an ability of predicting the case where there is no perpetrator at all (i.e. the victim suicides).
 
