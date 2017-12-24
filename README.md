@@ -56,6 +56,8 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 
 
 **Papers with quick notes**
+- *Neural Architecture Search with Reinforcement Learning* (https://openreview.net/pdf?id=r1Ue8Hcxg): An intriguing paper which shows that we can design a good neural network automatically based on a neural architecture search. Specifically, we can specify the structure and connectivity of a neural network by using a configuration string.
+
 - *SGDR: Stochastic Gradient Descent with Warm Restarts* (https://arxiv.org/abs/1608.03983): A simple and fun read. The authors propose a simple warm restart technique for stochastic gradient descent. I don't think I understand in detail how the warm restart mechanism works, but in brief, the learning rate is initialized to some value and is scheduled to decrease in each restart. This found to help SGD in terms of making it faster to converge (2x - 4x times). While the paper is nice, I don't really have an intuition why warm restarts help.
 
 - *Google Vizier: A service for black-box optimization* (https://research.google.com/pubs/pub46180.html): The paper presents design of a black-box optimization framework that produces state-of-the-art performance. The framework is an internal service that has become the de factor parameter tuning at Google. I am, however, not sure whether we can try it to do optimization for our own problem. But anyway, it is an interesting paper to know.
