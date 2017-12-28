@@ -56,6 +56,8 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 
 
 **Papers with quick notes**
+- *Deep Learning without Poor Local Minima* (http://www.mit.edu/~kawaguch/publications/kawaguchi-nips16.pdf): This paper is a good theoretical reference that shows that: for deep linear neural networks, every local minimum is a global minimum, but for deep non-linear neural networks, it is also the same given that there are some unrealistic assumptions. The paper is far from applicable to non-linear neural networks, but it is a nice progress to push forwards a better understanding of training deep neural networks.
+
 - *Identifying and attacking the saddle point problem in high-dimensional non-convex optimization* (https://ganguli-gang.stanford.edu/pdf/14.SaddlePoint.NIPS.pdf): It is often thought that a main source of difficulty for gradient descent method to find the global minimum is the proliferation of local minima with much higher error than
 the global minimum. Actually, recent results suggest this is unlikely the case, and this paper is one of the studies that raise this issue. Specifically, the paper claims that the ratio of the number of saddle points to local minima increases exponentially with the dimensionality N. Based on results from statistical physics, random matrix theory, neural network theory, and empirical evidence, that a deeper and more profound difficulty originates from the proliferation of saddle points, not local minima, especially in high dimensional problems of practical interest. The authors also propose algorithms to address the problem (escape saddle points), but admittedly it is too technical for me to understand those. 
 
