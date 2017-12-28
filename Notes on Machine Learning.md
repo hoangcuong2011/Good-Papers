@@ -75,3 +75,17 @@ A Bayesian neural network is a neural network with a prior distribution on the w
 - Propagates this into uncertainty about predictions
 - More robust against overfitting: randomly sampling over network weights as a cheap form of model averaging
 - Can infer network hyperparameters by marginalising them out of the posterior distribution" -http://rpubs.com/arowan/bayesian_deep_learning 
+
+27. "It is believed that for many problems including learning deep nets, almost all local minimum have very similar function value to the global optimum, and hence finding a local minimum is good enough. However, it is NP-hard to even find a local minimum. In the rest of the post, we will first see that getting stuck at saddle points is a very realistic possibility since most natural objective functions have exponentially many saddle points. We will then discuss how optimization algorithms can try to escape from saddle points." and "Finally, we prove that recovering the global minimum becomes harder as the network size increases and that it is in practice irrelevant as global minimum often leads to overfitting." http://www.offconvex.org/2016/03/22/saddlepoints/ and https://arxiv.org/abs/1412.0233
+
+28. "However, several researchers experimenting with larger networks and SGD had noticed that, while multilayer nets do have many local minima, the result of multiple experiments consistently give very similar performance. This suggests that, while local minima are numerous, they are relatively easy to find, and they are all more or less equivalent in terms of performance
+on the test set."  https://arxiv.org/abs/1412.0233
+
+
+29. "For large-size networks, most local minima are equivalent and yield similar performance on a test set. The probability of finding a “bad” (high value) local minimum is non-zero for small-size networks and decreases quickly with network size. Struggling to find the global minimum on the training set (as opposed to one of the many good local ones) is not useful in practice and may lead to overfitting." https://arxiv.org/abs/1412.0233
+
+
+30. "Unfortunately, it was shown in 1992 that training a very simple neural network is indeed NP-hard (Blum & Rivest, 1992). In the past, such theoretical concerns in optimization played a major role in shrinking the field of deep learning. That is, many researchers instead favored classical machining learning models (with or without a kernel approach) that require only convex optimization. While the recent great practical successes have revived the field, we do not yet know what makes optimization in deep learning tractable in theory." https://papers.nips.cc/paper/6112-deep-learning-without-poor-local-minima.pdf
+
+31. " A classic paper in optimisation is ‘No Free Lunch Theorems for Optimization’ which tells us that no general-purpose optimisation algorithm can dominate all others. So to get the best performance, we need to match our optimisation technique to the characteristics of the problem at hand"  https://blog.acolyer.org/2017/01/04/learning-to-learn-by-gradient-descent-by-gradient-descent/
+
