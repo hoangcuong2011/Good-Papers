@@ -56,6 +56,9 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 
 
 **Papers with quick notes**
+
+- *Learning to Optimize* (https://arxiv.org/abs/1606.01885): This paper explores automating algorithm design and present a method to learn an optimization method. The paper uses reinforcement learning to train their own model, with a note that simple supervised learning does not fit to the task since the data is not i.i.d. The authors also mention they use guided policy search instead of simple policy gradient due to its difficulty in training policy gradient (high variance). Overall this is a very good paper to know and there are a lot of things new to me. A good reference to the paper can also be found here http://bair.berkeley.edu/blog/2017/09/12/learning-to-optimize-with-rl/.
+
 - *Deep Learning without Poor Local Minima* (http://www.mit.edu/~kawaguch/publications/kawaguchi-nips16.pdf): This paper is a good theoretical reference that shows that: for deep linear neural networks, every local minimum is a global minimum, but for deep non-linear neural networks, it is also the same given that there are some unrealistic assumptions. The paper is far from applicable to non-linear neural networks, but it is a nice progress to push forwards a better understanding of training deep neural networks.
 
 - *Identifying and attacking the saddle point problem in high-dimensional non-convex optimization* (https://ganguli-gang.stanford.edu/pdf/14.SaddlePoint.NIPS.pdf): It is often thought that a main source of difficulty for gradient descent method to find the global minimum is the proliferation of local minima with much higher error than
