@@ -24,5 +24,8 @@ The another difficulty is that each hidden state may have multiple forward conne
 several precedents). In order to make it works we need some modifications regarding to the forget gate in LSTM. The best solution proposed
 in the paper is straightforward: each connection should have its own typed weight matrix. But this would brings much more parameters to train the model.
 
+Experiments reveal several interesting findings to me. First, Graph LSTMs are better than BiLSTMs, but the improvement is not that substantial. Perhaps, syntactic parsing is less accurate in the biomedical domain and this causes the observation. Interestingly, LSTMs significantly outperformed CNN in the cross-sentence setting, verifying the importance
+in capturing long-distance dependencies by LSTMs.
+
 
 
