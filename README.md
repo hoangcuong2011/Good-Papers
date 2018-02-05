@@ -14,6 +14,7 @@
 
 **Papers with detailed notes**
 
+- *Cross-Sentence N-ary Relation Extraction with Graph LSTMs*: https://arxiv.org/abs/1708.03743
 - *Six Challenges for Neural Machine Translation*: http://www.aclweb.org/anthology/W/W17/W17-3204.pdf
 - *Learning to Generate Reviews and Discovering Sentiment*: https://arxiv.org/pdf/1704.01444.pdf
 - *Black Box Variational Inference*: https://arxiv.org/pdf/1401.0118.pdf
