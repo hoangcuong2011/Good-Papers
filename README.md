@@ -13,6 +13,7 @@
 
 
 **Papers with detailed notes**
+- *Neutral Relation Extraction with Selective Attention over Instances*: http://www.aclweb.org/anthology/P16-1200
 - *Distant Supervision for Relation Extraction via Piecewise Convolutional Neural Networks*: http://www.emnlp2015.org/proceedings/EMNLP/pdf/EMNLP203.pdf
 - *Modeling Relation Paths for Representation Learning of Knowledge Bases*: http://www.aclweb.org/anthology/D15-1082
 - *Cross-Sentence N-ary Relation Extraction with Graph LSTMs*: https://arxiv.org/abs/1708.03743
