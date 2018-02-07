@@ -13,6 +13,7 @@
 
 
 **Papers with detailed notes**
+- *Distant Supervision for Relation Extraction via Piecewise Convolutional Neural Networks*: http://www.emnlp2015.org/proceedings/EMNLP/pdf/EMNLP203.pdf
 - *Modeling Relation Paths for Representation Learning of Knowledge Bases*: http://www.aclweb.org/anthology/D15-1082
 - *Cross-Sentence N-ary Relation Extraction with Graph LSTMs*: https://arxiv.org/abs/1708.03743
 - *Six Challenges for Neural Machine Translation*: http://www.aclweb.org/anthology/W/W17/W17-3204.pdf
