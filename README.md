@@ -60,6 +60,8 @@ unnormalized statistical models* http://proceedings.mlr.press/v9/gutmann10a/gutm
 
 **Papers with quick notes**
 
+- *Grammar as a Foreign Language* (https://arxiv.org/pdf/1412.7449.pdf): This paper shows how to apply sequence to sequence with attention to syntactic constituency parsing. To do that, they first  linearize the parse tree, and this can be done by following a depth-first traversal order. The result is very competitive with this simple model.
+
 - *Enriching Word Vectors with Subword Information* (https://arxiv.org/pdf/1607.04606.pdf): An interesting paper which shows that having a distance vector representation of words ignores the internal structure of words, which is an important limitation for morphologically rich languages, such as Turkish or Finnish. They propose a subword model for word embedding, in which a word is represented by a sequence of n-grams and the word itself. For instance, let us consider the word where. It will be represented by a sequence of 3-grams as: <wh, whe, her, ere, re>, <where>. Suppose that we are given such a sequence G of n-grams, and each of the n-grams is represented by a specific vector representation z. The scoring function between the word and its context c is computed as: \sum_{all n-grams g} z_g*v_c. This simple model, albeit being slightly adhoc,  allows sharing the representations across words, thus allowing to learn reliable representation for rare words. 
 
 
