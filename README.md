@@ -13,6 +13,7 @@
 
 
 **Papers with detailed notes**
+- *Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations*: https://arxiv.org/abs/1603.04351
 - *Neutral Relation Extraction with Selective Attention over Instances*: http://www.aclweb.org/anthology/P16-1200
 - *Distant Supervision for Relation Extraction via Piecewise Convolutional Neural Networks*: http://www.emnlp2015.org/proceedings/EMNLP/pdf/EMNLP203.pdf
 - *Modeling Relation Paths for Representation Learning of Knowledge Bases*: http://www.aclweb.org/anthology/D15-1082
