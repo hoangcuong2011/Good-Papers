@@ -6,7 +6,7 @@ is also developed in this work https://arxiv.org/pdf/1506.01094.pdf.
 At a high level, involving relation paths in training raises three difficulties:
 
 1. we need to handle an explosive number of possible paths to train.
-
+ 
 2. we need to handle the realiablity of paths. Some path makes senses: A was born in city B, B is a city of country C -> The nationality of A is C.
 Meanwhile, some path does not make any sense: A is a friend of B, B works with C -> It is unlikely that A has anything to do with C.
 
