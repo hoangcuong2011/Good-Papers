@@ -1,7 +1,7 @@
 - **Cross-Sentence N-ary Relation Extraction with Graph LSTMs** https://arxiv.org/abs/1708.03743
 
 This is a good paper that describes how we can extract a more than binary relationship between entities (e.g. ternary and n-ary in general).
-
+ 
 The problem itself is hard, and it is even harder given that we need to extract such relationships using cross-sentence extraction.
 This is because in a single sentence, such a relationship is barely existed. One can design a model with hand-craft features but the supervision signal for n-ary relations is gonna be sparse. The paper
 approaches the problem by learning a continuous representation for words and entities. Specificially, we use a neural network that learns a contextual representation
