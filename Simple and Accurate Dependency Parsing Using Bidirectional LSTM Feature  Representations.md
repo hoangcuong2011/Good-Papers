@@ -19,6 +19,7 @@ requiring more sophisticated inference and training algorithms.
 very fast parsing speeds.  More advanced transition-based parsers introduce some search into the process using a beam
 (Zhang and Clark, 2008) or dynamic programming.
 
+
 - Regardless of the details of the parsing framework being used, a crucial step in parser design is choosing the right feature 
 function for the underlying statistical model.  Recent work attempt to alleviate parts of the feature function design problem
 by moving from linear to non-linear models, enabling the modeler to focus on a small set of “core” features and leaving
