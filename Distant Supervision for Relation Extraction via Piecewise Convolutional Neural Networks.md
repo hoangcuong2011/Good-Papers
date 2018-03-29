@@ -2,7 +2,7 @@
 
 This is a very good paper, showing how we can improve relation extraction using distant supervision by two things. First, instead of
 extracting features manually (which could be wrong due to the error derived from existing NLP tools), we just need to use neural networks to extract them automatically. Second, instead of making an assumption
-that the relation between two entities that are found in a KB always directly applies to the (unlabeled) text, this paper focuses
+that the relation between two entities that are found in a KB always directly applies to the (unlabeled) text, this paper focuses 
 on improving this as sometimes it is not the case that it is true.
 
 Let us first focus on the second issue. The way the authors address the problem is to rely on multi-instance learning. It sounds fancy but
