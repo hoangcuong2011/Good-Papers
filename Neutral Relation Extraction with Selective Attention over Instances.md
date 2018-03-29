@@ -1,5 +1,7 @@
 - *Neutral Relation Extraction with Selective Attention over Instances* (http://www.aclweb.org/anthology/P16-1200): 
 
+
+
 An interesting paper shows how to improve relation extraction with selective attention model. 
 
 Specifically, a key to relation extraction using distance learning is to assume that what a pair of entities in a given 
