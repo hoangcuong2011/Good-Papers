@@ -168,3 +168,5 @@ generalize word2vec to other very interesting models (e.g. items in a bucket). A
 - *Categorical Variational Autoencoders using Gumbel-Softmax* - https://arxiv.org/abs/1611.01144 - Take-home message: How to convert discrite variable into an approximate form that fits into reparameterization tricks (using Gumbel-Softmax function).
 - *Context Gates for Neural Machine Translation* - https://arxiv.org/abs/1608.06043 - Take-home message: The paper shows that in seq2seq we should control how a word is generated. A content word should generated based on inputs, while a 
 common word should be generated based on the context of target words. The paper proposes a gate network that integrate the information into seq2seq in a nice way.
+
+- **https://ai.googleblog.com/2018/05/advances-in-semantic-textual-similarity.html**: some models trained on conversation data for sentence embedding, as well as some models use for question answering. Pretty basic.
