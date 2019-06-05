@@ -170,3 +170,5 @@ generalize word2vec to other very interesting models (e.g. items in a bucket). A
 common word should be generated based on the context of target words. The paper proposes a gate network that integrate the information into seq2seq in a nice way.
 
 - **https://ai.googleblog.com/2018/05/advances-in-semantic-textual-similarity.html**: some models trained on conversation data for sentence embedding, as well as some models use for question answering. Pretty basic.
+
+- **Rationalizing Neural Predictions**: very nice paper that learn the rationale behind the prediction given input. https://aclweb.org/anthology/D16-1011
